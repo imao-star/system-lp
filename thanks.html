@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>資料請求ありがとうございました｜AIインサイトセールス</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K8TSPFSP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3K8TSPFSP2');
+
+  // mail_pattern を ?p= から取得（LPからのリダイレクト時に引き継ぐ。既定 sf）
+  const tyParams = new URLSearchParams(window.location.search);
+  const tyPattern = tyParams.get('p') || 'sf';
+
+  // サンクスページ到達イベント（資料請求完了の最終確認に使える）
+  gtag('event', 'thanks_view', { 'page': 'thanks', 'lp_variant': 'systemdev', 'mail_pattern': tyPattern });
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================ */
+/* WordPressテーマ リセット（テーマの影響を完全に排除）           */
+/* ============================================================ */
+:where(.is-lp),
+:where(.is-lp *),
+:where(.is-lp *::before),
+:where(.is-lp *::after) {
+  all: revert;
+}
+
+.is-lp *,
+.is-lp *::before,
+.is-lp *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* テーマのコンテンツコンテナを突き破って全幅表示 */
+/* Timerexウィジェットがはみ出すケースに備えて overflow-x:clip を使用 */
+.is-lp {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: clip;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #1E293B;
+  background: #FFF;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+:where(.is-lp) :where(img) { max-width: 100%; height: auto; border: 0; }
+:where(.is-lp) :where(a) { text-decoration: none; color: inherit; }
+:where(.is-lp) :where(button) { font-family: inherit; cursor: pointer; border: 0; background: transparent; }
+:where(.is-lp) :where(ul), :where(.is-lp) :where(ol) { list-style: none; }
+
+/* ============================================================ */
+/* ページ本体スタイル                                            */
+/* ============================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0B1F42; --navy2:#162B55;
+  --blue:#1560BD; --sky:#0EA5E9; --sky-l:#E0F2FE;
+  --gold:#D4A017;
+  --red:#DC2626; --green:#16A34A;
+  --white:#FFF; --off:#F7F9FC;
+  --border:#DDE4EE; --text:#1E293B; --muted:#64748B; --light:#94A3B8;
+}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--off);line-height:1.7}
+
+/* ─── ヘッダー ─── */
+.ty-header{background:var(--navy);padding:18px 40px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid rgba(255,255,255,.08)}
+.ty-header-logo{display:flex;align-items:center}
+.ty-header-logo img{height:42px !important;width:auto !important;max-height:42px;filter:brightness(0) invert(1)}
+
+/* ─── 完了メッセージ ─── */
+.ty-hero{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:64px 24px 80px;position:relative;overflow:hidden}
+.ty-hero::before{content:'';position:absolute;inset:0;opacity:.05;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:28px 28px}
+.ty-hero-inner{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.ty-check{width:84px;height:84px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;font-size:42px;color:#fff;margin:0 auto 24px;box-shadow:0 12px 32px rgba(14,165,233,.4)}
+.ty-hero h1{font-size:clamp(24px,3vw,34px);font-weight:900;color:#fff;line-height:1.4;margin-bottom:16px;letter-spacing:-.01em}
+.ty-hero h1 span{color:var(--sky)}
+.ty-hero p{font-size:15px;color:rgba(255,255,255,.78);line-height:1.95;max-width:580px;margin:0 auto}
+.ty-hero p strong{color:#fff;font-weight:700}
+
+/* ─── 次のステップ案内 ─── */
+.ty-next{background:#fff;padding:56px 24px 40px;border-top:1px solid var(--border)}
+.ty-next-inner{max-width:760px;margin:0 auto;text-align:center}
+.ty-next-eyebrow{display:inline-block;font-size:11px;font-weight:700;color:var(--sky);letter-spacing:.18em;margin-bottom:12px;text-transform:uppercase}
+.ty-next h2{font-size:clamp(20px,2.4vw,28px);font-weight:900;color:var(--navy);line-height:1.4;margin-bottom:12px}
+.ty-next h2 .hl{background:linear-gradient(transparent 62%,rgba(14,165,233,.25) 62%);padding:0 3px}
+.ty-next-lead{font-size:14px;color:var(--muted);line-height:1.85;margin-bottom:8px}
+
+/* ─── Timerex 予約タブ ─── */
+.ty-timerex-wrap{max-width:920px;margin:32px auto 0;padding:0 8px}
+.ty-tabs{display:flex;gap:8px;margin-bottom:0;background:var(--off);padding:8px;border-radius:14px 14px 0 0;border:1px solid var(--border);border-bottom:none}
+.ty-tab{flex:1;padding:14px 16px;text-align:center;border-radius:8px;font-size:14px;font-weight:700;color:var(--muted);cursor:pointer;transition:all .2s;background:transparent;border:1.5px solid transparent}
+.ty-tab:hover{background:rgba(14,165,233,.06);color:var(--blue)}
+.ty-tab.active{background:#fff;color:var(--navy);border-color:var(--sky);box-shadow:0 4px 12px rgba(14,165,233,.18)}
+.ty-tab-icon{margin-right:8px;font-size:16px}
+.ty-tab-sub{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
+.ty-tab.active .ty-tab-sub{color:var(--sky)}
+
+.ty-cal-shell{background:#fff;border:1px solid var(--border);border-top:none;border-radius:0 0 14px 14px;padding:24px 16px 16px;min-height:560px;overflow:hidden}
+.ty-cal-note{font-size:12px;color:var(--muted);text-align:center;margin-bottom:16px;padding:10px 14px;background:var(--off);border-radius:8px;line-height:1.6}
+.ty-cal-note strong{color:var(--navy);font-weight:700}
+#timerex_calendar{width:100% !important;max-width:100% !important;min-height:500px}
+#timerex_calendar iframe{width:100% !important;max-width:100% !important}
+
+/* ─── スキップ案内（強制ではない） ─── */
+.ty-skip{padding:48px 24px 80px;text-align:center;background:var(--off)}
+.ty-skip p{font-size:13px;color:var(--muted);line-height:1.85;max-width:540px;margin:0 auto 16px}
+.ty-skip a.ty-back{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--blue);padding:10px 22px;border:1.5px solid var(--blue);border-radius:100px;background:#fff;transition:all .2s}
+.ty-skip a.ty-back:hover{background:var(--blue);color:#fff;transform:translateY(-2px);box-shadow:0 6px 18px rgba(21,96,189,.25)}
+
+/* ─── フッター ─── */
+.ty-footer{background:var(--navy);padding:32px 40px 28px}
+.ty-foot-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.ty-foot-logo img{height:34px !important;width:auto !important;max-height:34px;filter:brightness(0) invert(1)}
+.ty-foot-meta{font-size:11px;color:rgba(255,255,255,.4);text-align:right;line-height:1.7}
+.ty-foot-meta a{color:rgba(255,255,255,.7);font-weight:700;text-decoration:underline}
+
+/* ─── レスポンシブ ─── */
+@media(max-width:720px){
+  .ty-hero{padding:48px 20px 56px}
+  .ty-check{width:68px;height:68px;font-size:34px}
+  .ty-next{padding:40px 20px 28px}
+  .ty-tabs{flex-direction:column;gap:6px}
+  .ty-tab{padding:12px 14px}
+  .ty-foot-in{flex-direction:column;text-align:center}
+  .ty-foot-meta{text-align:center}
+  .ty-timerex-wrap{padding:0}
+  .ty-cal-shell{padding:16px 8px}
+}
+</style>
+</head>
+<body>
+<div class="is-lp">
+
+  <!-- ヘッダー -->
+  <header class="ty-header">
+    <div class="ty-header-logo">
+      <img src="./images/logo.png" alt="INSIGHT SALES">
+    </div>
+  </header>
+
+  <!-- 完了メッセージ -->
+  <section class="ty-hero">
+    <div class="ty-hero-inner">
+      <div class="ty-check">✓</div>
+      <h1>資料請求<span>ありがとうございました</span></h1>
+      <p>
+        担当者より<strong>1営業日以内</strong>に、<br>
+        ご登録のメールアドレス宛に資料をお送りいたします。
+      </p>
+    </div>
+  </section>
+
+  <!-- 次のステップ：Timerex予約 -->
+  <section class="ty-next">
+    <div class="ty-next-inner">
+      <div class="ty-next-eyebrow">Next Step（任意）</div>
+      <h2>資料の到着前に、<br><span class="hl">無料の個別相談</span>もご利用いただけます。</h2>
+      <p class="ty-next-lead">
+        システム開発会社様の状況に合わせて、新規開拓の仕組み化について<br>
+        担当者が個別にご案内します。お気軽にご予約ください。
+      </p>
+    </div>
+
+    <div class="ty-timerex-wrap">
+      <!-- タブ切替 -->
+      <div class="ty-tabs">
+        <button class="ty-tab active" id="tab-phone" onclick="switchTab('phone')">
+          <span class="ty-tab-icon">📞</span>お電話での個別相談
+          <span class="ty-tab-sub">15〜30分 / 気軽に話したい方へ</span>
+        </button>
+        <button class="ty-tab" id="tab-meeting" onclick="switchTab('meeting')">
+          <span class="ty-tab-icon">💻</span>オンライン商談
+          <span class="ty-tab-sub">45〜60分 / じっくり相談したい方へ</span>
+        </button>
+      </div>
+
+      <!-- カレンダー本体 -->
+      <div class="ty-cal-shell">
+        <div class="ty-cal-note">
+          ご希望の日時をお選びください。<strong>無理な営業は一切いたしません。</strong>
+        </div>
+        <div id="timerex_calendar" data-url="https://timerex.net/s/wu/70b53fbc"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 戻るリンク -->
+  <section class="ty-skip">
+    <p>
+      ご予約はお急ぎでなくても問題ございません。<br>
+      資料を読んでから検討したい方は、そのままお待ちください。
+    </p>
+    <a href="index.html" class="ty-back">← LPトップに戻る</a>
+  </section>
+
+  <!-- フッター -->
+  <footer class="ty-footer">
+    <div class="ty-foot-in">
+      <div class="ty-foot-logo">
+        <img src="./images/logo.png" alt="INSIGHT SALES">
+      </div>
+      <div class="ty-foot-meta">
+        運営：<a href="https://jdnw.jp/" target="_blank" rel="noopener">JDネット</a><br>
+        © AIインサイトセールス. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+</div><!-- /.is-lp -->
+
+<!-- Timerex 埋め込みスクリプト -->
+<script id="timerex_embed" src="https://asset.timerex.net/js/embed.js"></script>
+<script>
+const TIMEREX_URLS = {
+  phone:   'https://timerex.net/s/wu/70b53fbc',
+  meeting: 'https://timerex.net/s/wu/4390e215'
+};
+
+// 初期表示
+TimerexCalendar();
+
+// タブ切替 + GA4計測
+function switchTab(type) {
+  document.getElementById('tab-phone').classList.toggle('active', type === 'phone');
+  document.getElementById('tab-meeting').classList.toggle('active', type === 'meeting');
+
+  const cal = document.getElementById('timerex_calendar');
+  cal.setAttribute('data-url', TIMEREX_URLS[type]);
+  cal.innerHTML = '';
+  TimerexCalendar();
+
+  // GA4：予約タブのクリック計測（電話 / 商談 どちらに関心があるか）
+  if (typeof gtag === 'function') {
+    const p = new URLSearchParams(window.location.search).get('p') || 'sf';
+    gtag('event', 'booking_tab_click', {
+      'booking_type': type,
+      'lp_variant': 'systemdev',
+      'mail_pattern': p
+    });
+  }
+}
+</script>
+
+</body>
+</html>
