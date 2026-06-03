@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>資料｜システム開発会社のための新規開拓 事例・ノウハウ集｜AIインサイトセールス</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K8TSPFSP2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3K8TSPFSP2', { 'custom_map': {'dimension1': 'mail_pattern'} });
+
+  // 送付リンクのパラメータ取得（?c=会社識別 / ?s=送信者イニシャル / ?p=mail_pattern）
+  const dsParams = new URLSearchParams(window.location.search);
+  const dsCompany = dsParams.get('c') || '';
+  const dsSender  = dsParams.get('s') || '';
+  const dsPattern = dsParams.get('p') || 'sf';
+
+  // 資料閲覧ページ到達イベント（誰が資料を開いたかの計測）
+  gtag('event', 'doc_view', {
+    'page': 'docs_systemdev',
+    'lp_variant': 'systemdev',
+    'mail_pattern': dsPattern,
+    'company_id': dsCompany,
+    'sender_initial': dsSender
+  });
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "wst9u2zzlp");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#0B1F42; --navy2:#162B55; --blue:#1560BD; --sky:#0EA5E9; --skyl:#E0F2FE;
+  --gold:#D4A017; --white:#FFF; --off:#F7F9FC;
+  --border:#DDE4EE; --text:#1E293B; --muted:#64748B; --light:#94A3B8;
+}
+body{font-family:'Noto Sans JP',sans-serif;color:var(--text);background:var(--off);line-height:1.7}
+img{max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:0;background:transparent}
+
+/* ── ヘッダー ── */
+.ds-header{background:var(--navy);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.08)}
+.ds-header .logo{color:#fff;font-weight:700;font-size:15px;letter-spacing:.04em}
+.ds-header .tag{color:#8fa3c4;font-size:11px;letter-spacing:.08em}
+
+/* ── ヒーロー ── */
+.ds-hero{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:54px 24px 60px;position:relative;overflow:hidden}
+.ds-hero::before{content:'';position:absolute;inset:0;opacity:.05;background-image:radial-gradient(circle,#fff 1px,transparent 1px);background-size:28px 28px}
+.ds-hero-in{max-width:760px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.ds-check{width:72px;height:72px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;font-size:38px;color:#fff;margin:0 auto 20px;box-shadow:0 12px 32px rgba(14,165,233,.4)}
+.ds-hero h1{font-size:clamp(22px,3vw,30px);font-weight:900;color:#fff;line-height:1.4;margin-bottom:14px}
+.ds-hero p{font-size:14px;color:rgba(255,255,255,.78);line-height:1.9;max-width:560px;margin:0 auto}
+.ds-hero p strong{color:#fff;font-weight:700}
+.ds-meta{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.ds-meta span{font-size:11px;color:#aebbcf;border:1px solid rgba(255,255,255,.18);padding:5px 12px;border-radius:100px}
+
+/* ── 資料セクション ── */
+.ds-doc{background:#fff;padding:48px 24px 40px;border-top:1px solid var(--border)}
+.ds-doc-in{max-width:920px;margin:0 auto}
+.ds-eyebrow{display:inline-block;font-size:11px;font-weight:700;color:var(--sky);letter-spacing:.18em;margin-bottom:10px;text-transform:uppercase}
+.ds-doc h2{font-size:clamp(19px,2.3vw,25px);font-weight:900;color:var(--navy);line-height:1.45;text-align:center;margin-bottom:8px}
+.ds-doc .lead{font-size:13.5px;color:var(--muted);text-align:center;line-height:1.85;margin-bottom:24px}
+
+.ds-open{display:block;max-width:420px;margin:0 auto 18px;background:var(--blue);color:#fff;font-size:16px;font-weight:900;text-align:center;padding:16px 24px;border-radius:12px}
+.ds-open:hover{background:#0f4f9e}
+.ds-open .small{display:block;font-size:11px;font-weight:500;color:rgba(255,255,255,.8);margin-top:3px}
+
+.ds-frame{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--off);box-shadow:0 8px 24px rgba(11,31,66,.08)}
+.ds-frame iframe{display:block;width:100%;height:680px;border:0;background:#fff}
+.ds-frame-note{font-size:12px;color:var(--muted);text-align:center;padding:10px 14px;line-height:1.6}
+.ds-frame-note a{color:var(--blue);font-weight:700;text-decoration:underline}
+
+/* ── 商談CTA ── */
+.ds-cta{background:var(--off);padding:52px 24px 48px}
+.ds-cta-in{max-width:760px;margin:0 auto;text-align:center}
+.ds-cta h2{font-size:clamp(20px,2.4vw,27px);font-weight:900;color:var(--navy);line-height:1.4;margin-bottom:12px}
+.ds-cta h2 .hl{background:linear-gradient(transparent 60%,rgba(14,165,233,.28) 60%);padding:0 3px}
+.ds-cta .lead{font-size:14px;color:#3a4856;line-height:1.85;max-width:560px;margin:0 auto 26px}
+.ds-book{display:block;max-width:430px;margin:0 auto;background:var(--sky);color:#fff;font-size:18px;font-weight:900;text-align:center;padding:20px 24px;border-radius:12px;box-shadow:0 10px 26px rgba(14,165,233,.3)}
+.ds-book:hover{background:#0c93d1;transform:translateY(-2px);transition:all .2s}
+.ds-phone{display:inline-block;margin-top:14px;font-size:13px;color:var(--blue);font-weight:700}
+.ds-phone a{text-decoration:underline}
+.ds-noteline{margin-top:20px;font-size:12px;color:var(--muted)}
+
+/* ── 信頼帯 ── */
+.ds-trust{max-width:760px;margin:30px auto 0;background:var(--navy);border-radius:12px;padding:18px 14px;display:flex;justify-content:space-around;align-items:center;flex-wrap:wrap;gap:10px}
+.ds-trust .ti{text-align:center}
+.ds-trust .ti .tn{display:block;font-size:18px;font-weight:900;color:var(--sky);line-height:1.1}
+.ds-trust .ti .tt{display:block;font-size:9.5px;color:#aebbcf;margin-top:3px}
+.ds-trust .ti.co{font-size:10px;color:#c9d3e2;font-weight:700;line-height:1.5}
+
+/* ── フッター ── */
+.ds-footer{background:var(--navy);padding:28px 40px}
+.ds-foot-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+.ds-foot-logo{color:#fff;font-weight:700;font-size:14px;letter-spacing:.04em}
+.ds-foot-meta{font-size:11px;color:rgba(255,255,255,.45);text-align:right;line-height:1.7}
+
+@media(max-width:720px){
+  .ds-header{padding:14px 20px}
+  .ds-hero{padding:42px 20px 48px}
+  .ds-check{width:60px;height:60px;font-size:30px}
+  .ds-doc{padding:36px 18px 28px}
+  .ds-frame iframe{height:480px}
+  .ds-cta{padding:40px 18px}
+  .ds-foot-in{flex-direction:column;text-align:center}
+  .ds-foot-meta{text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ヘッダー -->
+<header class="ds-header">
+  <span class="logo">AI インサイトセールス</span>
+  <span class="tag">for System Development</span>
+</header>
+
+<!-- ヒーロー -->
+<section class="ds-hero">
+  <div class="ds-hero-in">
+    <div class="ds-check">✓</div>
+    <h1>資料をお届けします</h1>
+    <p>
+      ご請求ありがとうございます。本ページで、<strong>システム開発会社のための新規開拓 事例・ノウハウ集</strong>をご覧いただけます。<br>
+      ダウンロードも可能です。
+    </p>
+    <div class="ds-meta">
+      <span>システム開発・SES・受託会社 専門</span>
+      <span>株式会社ライトアップ（東証グロース上場）提供</span>
+      <span>商談は30分</span>
+    </div>
+  </div>
+</section>
+
+<!-- 資料 -->
+<section class="ds-doc">
+  <div class="ds-doc-in">
+    <span class="ds-eyebrow" style="display:block;text-align:center;">DOCUMENT</span>
+    <h2>システム開発会社のための新規開拓 事例・ノウハウ集</h2>
+    <p class="lead">紹介・媒体依存から「仕組み化」へ。同業の実数値と、御社で再現するための型をまとめています。</p>
+
+    <a class="ds-open" href="./Sales_System_Engineering.pdf" target="_blank" rel="noopener" id="open-pdf">
+      資料を開く（PDF）
+      <span class="small">別タブで開きます ／ ダウンロードもこちらから</span>
+    </a>
+
+    <div class="ds-frame">
+      <iframe src="./Sales_System_Engineering.pdf#view=FitH&toolbar=1" title="システム開発会社のための新規開拓 事例・ノウハウ集"></iframe>
+      <div class="ds-frame-note">
+        資料がうまく表示されない場合は、<a href="./Sales_System_Engineering.pdf" target="_blank" rel="noopener">こちらから開いて</a>ご覧ください。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 商談CTA -->
+<section class="ds-cta">
+  <div class="ds-cta-in">
+    <h2>資料の内容を、<span class="hl">御社に当てはめて</span>30分で。</h2>
+    <p class="lead">
+      売り込みはいたしません。御社の技術・開発体制をうかがい、「狙うべき相手」と「刺さる切り口」の当たりを一緒につけます。資料を読んでからでも大丈夫です。
+    </p>
+
+    <a class="ds-book" href="https://timerex.net/s/wu/4390e215" target="_blank" rel="noopener" id="book-meeting" data-type="meeting">
+      オンラインで30分相談を予約する　→
+    </a>
+    <div class="ds-phone">お電話（15〜30分）がよければ　<a href="https://timerex.net/s/wu/70b53fbc" target="_blank" rel="noopener" id="book-phone" data-type="phone">こちらから予約</a></div>
+
+    <div class="ds-trust">
+      <div class="ti"><span class="tn">200社超</span><span class="tt">累計支援</span></div>
+      <div class="ti"><span class="tn">97%</span><span class="tt">継続率</span></div>
+      <div class="ti"><span class="tn">4億円超</span><span class="tt">累計売上貢献</span></div>
+      <div class="ti co">東証グロース上場<br>株式会社ライトアップ</div>
+    </div>
+
+    <div class="ds-noteline">無理な営業はいたしません。</div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer class="ds-footer">
+  <div class="ds-foot-in">
+    <span class="ds-foot-logo">AI インサイトセールス</span>
+    <div class="ds-foot-meta">
+      運営：株式会社ライトアップ（東証グロース上場）<br>
+      © AIインサイトセールス. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- 計測：資料を開く／予約クリック -->
+<script>
+  function track(name, params){ if(typeof gtag==='function'){ gtag('event', name, params); } }
+  var common = { 'lp_variant':'systemdev', 'mail_pattern':dsPattern, 'company_id':dsCompany, 'sender_initial':dsSender };
+
+  var op = document.getElementById('open-pdf');
+  if(op){ op.addEventListener('click', function(){ track('doc_open', Object.assign({'doc':'systemdev'}, common)); }); }
+
+  ['book-meeting','book-phone'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el){ el.addEventListener('click', function(){
+      track('booking_click', Object.assign({'booking_type': el.getAttribute('data-type')}, common));
+    }); }
+  });
+</script>
+
+</body>
+</html>
