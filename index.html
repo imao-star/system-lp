@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preload" as="image" href="hero-bg.webp" fetchpriority="high">
-<meta name="theme-color" content="#14213A">
 <title>その掲載費、"待ち"のまま溶けていませんか｜インサイトセールス</title>
 <meta name="description" content="比較媒体に払い続ける掲載費で、待ちの営業から抜け出せていますか。制作会社が自社で新規商談を取りにいくための、多チャネル運用×伴走型の新規開拓。累計支援200社超・売上貢献4億円超。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="その掲載費、&quot;待ち&quot;のまま溶けていませんか｜インサイトセールス">
+<meta property="og:description" content="制作会社が自社で新規商談を取りにいくための、多チャネル運用×伴走型の新規開拓。まず貴社条件の100社リストを無料で。">
+<meta property="og:url" content="https://systemdev.insight-sales.jp/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- ▼フォント非同期読み込み（レンダリングをブロックしない）。まずは本文フォントのZen Kaku Gothic Newを優先preload、他は遅延 -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap">
-</noscript>
-<!-- ▲フォント非同期読み込み -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap"></noscript>
 
-<!-- ▼GA4（デプロイ版のみ・オフライン確認では発火しません） -->
+<!-- GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K8TSPFSP2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -25,871 +25,1132 @@
   gtag('js', new Date());
   gtag('config', 'G-3K8TSPFSP2');
 </script>
-<!-- ▲GA4 -->
-
-<!-- ▼Microsoft Clarity -->
-<script type="text/javascript">
+<!-- Microsoft Clarity -->
+<script>
   (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "wst9u2zzlp");
 </script>
-<!-- ▲Clarity -->
 
 <style>
+/* ============================================================
+   v2 ── 編集紙面：罫線・余白・スケールで組む。箱に頼らない。
+   paper #F5F4EF / ink #20242C / shu #CE3A24 / mute #8E929B
+   ============================================================ */
 :root{
-  --ink:#14213A;         /* ベース70% 深藍（帳簿インク） */
-  --paper:#F5F2EB;       /* メイン25% 生成り紙 */
-  --gold:#E85F42;        /* アクセント5% 朱（赤字の赤）CTA/損失数字専用 */
-  --gold-d:#C13B22;
-  --sub:#94A1B5;         /* 暗背景上サブ文字（藍鼠） */
-  --sub-l:#6C7280;       /* 明背景上サブ文字 */
-  --line-d:rgba(244,245,242,.14);
-  --line-l:#E3DFD3;
-  --mono:"JetBrains Mono",ui-monospace,"SFMono-Regular",Consolas,Menlo,monospace;
-  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
-  --maxw:1240px;
+  --paper:#F5F4EF;
+  --paper-2:#ECEBE4;
+  --sheet:#FBFAF7;
+  --ink:#20242C;
+  --ink-2:#4A4F59;
+  --shu:#CE3A24;
+  --shu-dk:#A92D1A;
+  --mute:#8E929B;
+  --line:#D8D6CC;
+  --line-dk:#B9B7AC;
+  --ok:#2E7D5B;
+  --disp:"Shippori Mincho B1", serif;
+  --body:"Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif;
+  --mono:"JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --w:1160px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
 body{
-  font-family:"Zen Kaku Gothic New",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
-  font-weight:500;color:var(--ink);background:var(--paper);
-  font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  font-family:var(--body);
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.9;
+  font-size:15.5px;
+  -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-h1,h2,h3{font-weight:900;line-height:1.42;font-feature-settings:"palt";letter-spacing:.01em;text-wrap:balance}
-h1,h2{font-family:var(--serif);font-weight:800;letter-spacing:.035em;line-height:1.5}
+/* 紙のノイズ */
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.6'/%3E%3C/svg%3E");
+}
+::selection{background:var(--shu);color:#fff}
+img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-.mono{font-family:var(--mono)}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+:focus-visible{outline:3px solid var(--shu);outline-offset:3px}
 
-/* ===== CTA（孤立効果：ページ内でこの色はCTAと損失数字のみ） ===== */
-.cta{
-  display:inline-flex;align-items:center;justify-content:center;gap:.7em;
-  background:linear-gradient(180deg,#EE6A4C 0%,#DC4227 55%,#B23119 100%);color:#FFF8F3;font-weight:900;font-family:inherit;
-  letter-spacing:.02em;
-  border:0;border-radius:7px;cursor:pointer;text-align:center;
-  box-shadow:0 6px 20px rgba(220,66,39,.30), inset 0 1px 0 rgba(255,255,255,.32), inset 0 -1px 0 rgba(0,0,0,.14);
-  transition:transform .16s ease, box-shadow .16s ease, filter .16s ease;
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
+
+/* ---------- 日本語の折り返し ----------
+   strict：行頭に長音符・小書き仮名を残さない（既定の auto では許容されてしまう）。
+   auto-phrase：文節単位で折る。「単価がじりじり下がっ／ていく」のような語中改行を防ぐ。
+   pretty：最終行に1〜2文字だけ落ちる泣き別れを避ける。
+   後ろ2つは非対応ブラウザでは無視されるだけなので、既存の見え方を壊さない。 */
+body{line-break:strict}
+h1,h2,h3,.disp,p,dd,li,figcaption{word-break:auto-phrase;text-wrap:pretty}
+
+h1,h2,h3,.disp{font-family:var(--disp);font-weight:800;line-height:1.42;letter-spacing:.01em;font-feature-settings:"palt"}
+h2{font-size:clamp(30px,4vw,46px)}
+.lead{color:var(--ink-2);max-width:41em}
+
+/* ---------- セクション骨格：横罫＋ゴースト番号＋非対称 ----------
+   下パディングは「そのセクションが何で終わるか」で決める。
+   一律の定数を置かない（余白は構造の結果であって手段ではない）。   */
+.sec{position:relative;padding:104px 0 0;border-top:1px solid var(--line-dk)}
+/* 本文・図版で終わる：次の罫まで通常の間 */
+#pain,#flow{padding-bottom:104px}
+/* CTAで閉じる：CTA直下は詰めて次へ送り出す */
+#proof,#price{padding-bottom:56px}
+/* 対比表で閉じる墨帯：下を持たず、次の白紙面と直接ぶつける */
+#future{padding-bottom:0}
+/* 索引：最後の罫がそのまま区切りになる */
+#faq{padding-bottom:72px}
+/* フォームで閉じる：フッターの墨と接するため軽く空ける */
+#offer{padding-bottom:88px}
+.gno{
+  position:absolute;top:38px;right:8px;z-index:0;
+  font-family:var(--mono);font-weight:700;line-height:1;
+  font-size:clamp(120px,15vw,210px);
+  color:transparent;-webkit-text-stroke:1px var(--line);
+  user-select:none;pointer-events:none;
 }
-.cta:hover{filter:brightness(.96) saturate(1.05);transform:translateY(-2px);box-shadow:0 10px 28px rgba(220,66,39,.42), inset 0 1px 0 rgba(255,255,255,.32)}
-.cta:focus-visible{outline:3px solid var(--paper);outline-offset:3px}
-.cta--lg{font-size:19px;padding:20px 40px}
-.cta .arw{font-family:var(--mono);font-weight:400}
-
-/* ===== header ===== */
-.hd{position:absolute;top:0;left:0;right:0;z-index:20}
-.hd-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px clamp(24px,5vw,96px);max-width:none;margin:0}
-.hd .logo{color:var(--paper);font-weight:900;font-size:17px;letter-spacing:.02em;line-height:1.3}
-.hd .logo span{display:block;font-family:var(--mono);font-weight:400;font-size:10px;color:var(--sub);letter-spacing:.06em}
-.hd-tel{display:flex;align-items:center;gap:14px}
-.hd-tel .t{color:var(--paper);font-family:var(--mono);font-size:13px;text-align:right;line-height:1.35}
-.hd-tel .t b{display:block;font-size:17px;font-weight:700;letter-spacing:.02em}
-.hd-tel .t span{color:var(--sub);font-size:10.5px}
-.hd-cta{background:transparent;color:var(--paper);border:1px solid rgba(244,245,242,.35);border-radius:6px;padding:9px 15px;font-size:12.5px;font-weight:700;white-space:nowrap;transition:border-color .15s,background .15s}
-.hd-cta:hover{border-color:var(--gold);color:var(--gold)}
-
-/* ===== hero（Zパターン：左上ロゴ→右上TEL→中央コピー→右下CTA相当） ===== */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:var(--paper);background:var(--ink);isolation:isolate}
-.hero-bg{position:absolute;inset:0;z-index:-2;background-size:cover;background-position:right center;background-repeat:no-repeat}
-.hero-veil{position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(90deg, rgba(9,16,28,.97) 0%, rgba(9,16,28,.90) 40%, rgba(9,16,28,.72) 68%, rgba(9,16,28,.40) 85%, rgba(9,16,28,.28) 100%);
+@supports not (-webkit-text-stroke:1px black){ .gno{color:var(--paper-2)} }
+.sec > .wrap{position:relative;z-index:1}
+.kicker{
+  font-family:var(--mono);font-size:12px;letter-spacing:.22em;
+  color:var(--shu);margin-bottom:20px;font-weight:700;
 }
-.hero-in{width:100%;max-width:clamp(880px,46vw,1300px);margin:0;padding:120px 24px 56px clamp(24px,5vw,96px)}
-.hero-eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--sub);display:flex;align-items:center;gap:12px}
-.hero-eyebrow::before{content:"";width:26px;height:1px;background:var(--gold)}
-.hero h1{font-size:clamp(33px,6.2vw,64px);line-height:1.44;margin-top:24px;max-width:15em;text-shadow:0 2px 24px rgba(0,0,0,.45)}
-.hero h1 .mark{color:var(--gold)}
-.hero-lead{margin-top:26px;max-width:30em;color:#D5D8DC;font-size:clamp(15px,1.5vw,17px);line-height:1.95}
-.hero-svc{margin-top:16px;max-width:33em;color:#C6CACF;font-size:14px;line-height:1.85}
-.hero-svc b{color:var(--gold);font-weight:700}
+.sec-head{max-width:900px;margin-bottom:56px}
+.sec-head .lead{margin-top:20px}
+/* 本文塊を右へずらす非対称カラム */
+.shift{margin-left:clamp(0px,8vw,120px)}
+@media (max-width:860px){ .shift{margin-left:0} }
 
-/* signature: 損失カウンター */
-.counter{margin-top:40px;border:1px solid var(--line-d);border-radius:12px;background:rgba(0,0,0,.28);backdrop-filter:blur(3px);padding:22px 26px;max-width:520px}
-.counter-t{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--sub)}
-.counter-t .live{width:7px;height:7px;border-radius:50%;background:var(--gold);animation:blink 1.5s ease-in-out infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-@media (prefers-reduced-motion:reduce){.counter-t .live{animation:none}}
-.counter-val{margin-top:8px;display:flex;align-items:baseline;gap:2px;font-family:var(--mono);font-weight:700;color:var(--gold);line-height:1;letter-spacing:-.01em}
-.counter-val .yen{font-size:clamp(26px,4vw,38px);margin-right:4px}
-.counter-val .num{font-size:clamp(40px,8vw,68px);font-variant-numeric:tabular-nums}
-.counter-val .unit{font-size:clamp(18px,3vw,24px);color:var(--paper);margin-left:6px;font-weight:700}
-.counter-note{margin-top:10px;font-size:12px;color:var(--sub);line-height:1.6}
-.hero-cta{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
-.hero-cta .micro{font-family:var(--mono);font-size:12px;color:var(--sub)}
-.scroll-cue{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:1;color:var(--sub);font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;display:flex;flex-direction:column;align-items:center;gap:8px}
-.scroll-cue .bar{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:cue 1.9s ease-in-out infinite}
-@keyframes cue{0%{transform:scaleY(.3);transform-origin:top;opacity:.3}50%{transform:scaleY(1);opacity:1}100%{transform:scaleY(.3);transform-origin:bottom;opacity:.3}}
-@media (prefers-reduced-motion:reduce){.scroll-cue .bar{animation:none}}
+/* ---------- 朱の校正マーク ---------- */
+.aka{color:var(--shu);position:relative;white-space:nowrap}
+.aka svg{position:absolute;left:-7%;top:-16%;width:114%;height:132%;pointer-events:none;overflow:visible}
+.aka svg path{fill:none;stroke:var(--shu);stroke-linecap:round}
+.aka svg .p1{stroke-width:2.4;opacity:.9}
+.aka svg .p2{stroke-width:1.4;opacity:.5}
+@media (prefers-reduced-motion: no-preference){
+  .aka svg path{stroke-dasharray:340;stroke-dashoffset:340;animation:akaDraw .7s ease-out .6s forwards}
+  .aka svg .p2{animation-delay:.75s}
+  @keyframes akaDraw{to{stroke-dashoffset:0}}
+}
 
-/* ===== section base ===== */
-.sec{padding:clamp(72px,10vw,128px) 0}
-.sec-tag{font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;color:var(--sub-l);font-weight:700}
-.dark .sec-tag{color:var(--sub)}
-.sec-h2{font-size:clamp(25px,3.9vw,42px);margin-top:16px;max-width:20em}
-.sec-lead{margin-top:22px;max-width:34em;color:var(--sub-l);font-size:16px}
-.dark{background:var(--ink);color:var(--paper)}
-.dark .sec-lead{color:var(--sub)}
+/* ---------- CTA ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  background:var(--shu);color:#fff;
+  font-weight:700;font-size:16.5px;letter-spacing:.05em;
+  padding:19px 38px;border:1px solid var(--shu);cursor:pointer;
+  transition:background .16s ease,color .16s ease,transform .16s ease;
+  font-family:var(--body);
+}
+.btn:hover{background:var(--shu-dk);border-color:var(--shu-dk);transform:translateY(2px)}
+.btn .ar{font-family:var(--mono);font-weight:700;transition:transform .16s ease}
+.btn:hover .ar{transform:translateX(4px)}
+.btn-note{margin-top:12px;font-size:12.5px;color:var(--mute);line-height:1.7}
+.cta-pair{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn--sub{
+  background:transparent;color:var(--ink);border:1.5px solid var(--line-dk);
+  font-size:14.5px;padding:17px 26px;font-weight:700;
+}
+.btn--sub:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn--sub .sm{font-size:11px;color:var(--mute);font-weight:400;margin-left:2px}
+.btn--sub:hover .sm{color:rgba(255,255,255,.7)}
+.txt-cta{
+  display:inline-flex;align-items:baseline;gap:10px;
+  font-family:var(--disp);font-weight:800;font-size:17px;color:var(--ink);
+}
+.txt-cta .u{border-bottom:2px solid var(--shu);padding-bottom:2px}
+.txt-cta .ar{font-family:var(--mono);color:var(--shu);transition:transform .18s ease}
+.txt-cta:hover .ar{transform:translateX(4px)}
 
-/* ===== 01 共感（Fパターン：訴求語を左端に） ===== */
-.pains{margin-top:52px;display:grid;gap:0}
-.pain{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start;padding:30px 0;border-top:1px solid var(--line-l)}
-.pain:last-child{border-bottom:1px solid var(--line-l)}
-.pain-ico{width:44px;height:44px;border:1.5px solid var(--ink);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.pain-ico svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:1.7}
-.pain h3{font-size:clamp(18px,2.1vw,21px)}
-.pain p{margin-top:7px;color:var(--sub-l);font-size:15px;max-width:40em}
-.pain-bridge{margin-top:56px;padding:34px 34px;background:var(--ink);color:var(--paper);border-radius:12px}
-.pain-bridge p:first-child{font-size:clamp(19px,2.6vw,26px);font-weight:900;font-feature-settings:"palt";line-height:1.55}
-.pain-bridge p:first-child b{color:var(--gold)}
-.pain-bridge p+p{margin-top:12px;color:var(--sub);font-size:15px}
+/* ============================================================
+   HEADER：一本の罫
+   ============================================================ */
+.gh{position:sticky;top:0;z-index:60;background:rgba(245,244,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-dk)}
+/* 高さは固定しない。固定高だと狭幅で中身がはみ出し、ヘッダー下端の罫が割れる */
+.gh .wrap{display:flex;align-items:center;gap:22px;min-height:62px;padding-top:8px;padding-bottom:8px}
+.brand{font-family:var(--disp);font-weight:800;font-size:17px;letter-spacing:.08em}
+.brand small{font-family:var(--mono);font-weight:400;font-size:9px;letter-spacing:.32em;color:var(--mute);margin-left:10px}
+.gh-tel{margin-left:auto;text-align:right;line-height:1.35}
+.gh-tel a{font-family:var(--mono);font-weight:700;font-size:15px}
+.gh-tel span{display:block;font-size:10px;color:var(--mute)}
+.gh .btn{font-size:13.5px;padding:10px 20px;gap:0;transition:opacity .16s ease,transform .16s ease}
+/* BRAND 6項：ページ内に朱のボタンを二つ立てない。
+   追従CTAが出ている間はヘッダーのCTAを引っ込め、朱＝行動の記号を一つに保つ。 */
+body.sticky-on .gh .btn{opacity:0;pointer-events:none;transform:translateY(-6px)}
+@media (max-width:680px){
+  .gh-tel{display:none}
+  .brand small{display:none}
+  .gh .wrap{gap:12px}
+  .brand{font-size:15px;white-space:nowrap}
+  /* 文言を短縮して1行に収め、罫を割らせない */
+  .gh .btn{margin-left:auto;font-size:12.5px;padding:9px 14px;white-space:nowrap}
+  .gh .btn .lg{display:none}
+}
 
-/* ===== 02 社会的証明（dark／巨大数字＝スケールコントラスト） ===== */
-.proof-nums{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px 24px}
-.proof-nums>div{border-top:1px solid var(--line-d);padding-top:18px}
-.proof-nums dt{font-size:11.5px;font-weight:700;letter-spacing:.06em;color:var(--sub)}
-.proof-nums dd{margin-top:8px;line-height:1}
-.proof-nums dd .n{font-family:var(--mono);font-weight:700;font-size:clamp(38px,5.4vw,60px);letter-spacing:-.02em;color:var(--paper);font-variant-numeric:tabular-nums}
-.proof-nums dd .s{font-size:15px;font-weight:700;margin-left:3px}
-.proof-nums dd .pre{font-size:13px;color:var(--sub);margin-right:4px}
-.cases{margin-top:64px;display:grid;gap:0}
-.case{display:grid;grid-template-columns:172px 1fr 196px;gap:16px 40px;padding:34px 0;border-top:1px solid var(--line-d);align-items:center}
-.case:last-of-type{border-bottom:1px solid var(--line-d)}
-.case-co{font-weight:900;font-size:18px;line-height:1.45}
-.case-co span{display:block;font-family:var(--mono);font-weight:400;font-size:11px;color:var(--sub);margin-top:5px;letter-spacing:.03em}
-.case-body .q{font-size:clamp(16px,1.9vw,19px);font-weight:700;line-height:1.7;color:var(--paper)}
-.case-body .d{margin-top:10px;color:var(--sub);font-size:14px;line-height:1.8}
-.case-viz{display:flex;flex-direction:column;align-items:center;gap:12px}
-.viz-bars{display:flex;gap:18px;justify-content:center;align-items:flex-end}
-.viz-bar{display:flex;flex-direction:column;align-items:center}
-.viz-track{width:34px;height:104px;display:flex;align-items:flex-end;border-bottom:1px solid var(--line-d)}
-.viz-col{width:100%;border-radius:5px 5px 0 0;background:var(--sub);opacity:.45;min-height:2px}
-.viz-col.on{background:var(--gold);opacity:1}
-.viz-bl{margin-top:9px;font-family:var(--mono);font-size:10px;color:var(--sub);text-align:center;line-height:1.35}
-.viz-bl b{display:block;color:var(--paper);font-weight:700;font-size:13px;margin-top:2px;letter-spacing:-.01em}
-.viz-bar.on .viz-bl b{color:var(--gold)}
-.viz-mark{display:flex;flex-direction:column;align-items:center;justify-content:center;height:113px;gap:9px}
-.viz-mark .ring{width:64px;height:64px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:28px;line-height:1}
-.viz-mark .mk-t{font-weight:900;font-size:15px;color:var(--paper)}
-.viz-cap{font-family:var(--mono);font-size:10px;color:var(--sub);letter-spacing:.04em;text-align:center}
-.case-note{margin-top:28px;font-family:var(--mono);font-size:11px;color:var(--sub);line-height:1.7}
+/* ============================================================
+   HERO：左に大組みの主張、右に傾いた伝票
+   ============================================================ */
+.hero{position:relative;padding:64px 0 84px}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .95fr;gap:40px;align-items:start}
+.hero-eyebrow{
+  display:inline-block;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--ink-2);
+  border-left:3px solid var(--shu);padding-left:12px;margin-bottom:30px;
+}
+.hero h1{font-size:clamp(34px,4.9vw,62px);line-height:1.38;margin-bottom:26px;letter-spacing:.005em}
+.hero-lead{color:var(--ink-2);margin-bottom:12px;max-width:32em}
+.hero-sub{font-size:13.5px;color:var(--mute);margin-bottom:34px;max-width:34em}
+.hero-sub b{color:var(--ink-2)}
+.hero-cta .btn{font-size:17.5px;padding:21px 44px}
+/* 初回の登場演出（1回だけ）。BRAND 7項によりループさせない。
+   H1の朱の校正マーク（.aka／.6s・.75s）を描き終えた直後に、CTA塊が一度だけ立ち上がる。
+   .btn 自身ではなく親を動かすので、hover の沈み込み transform とは競合しない。
+   fill-mode:both のため、アニメーション非対応環境でも最終的に必ず可視。 */
+@media (prefers-reduced-motion: no-preference){
+  .hero-cta{animation:heroCtaIn .55s cubic-bezier(.2,.7,.3,1) .95s both}
+  @keyframes heroCtaIn{
+    from{opacity:0;transform:translateY(12px)}
+    to{opacity:1;transform:none}
+  }
+}
+/* 導入の流れの1行要約：低温層に「まだ何も決めなくていい」を先に渡す */
+.hero-path{
+  margin-top:16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;
+  color:var(--mute);display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;
+}
+.hero-path .sep{color:var(--line-dk)}
+.hero-path b{color:var(--ink-2);font-weight:700}
+.hero-trust{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:24px;font-size:12px;color:var(--mute)}
+.hero-trust li{list-style:none;display:flex;align-items:center;gap:6px}
+.hero-trust li::before{content:"✓";color:var(--ok);font-weight:700}
 
-/* ===== 03 未来（before/after 2カラム） ===== */
-.vs{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.vs-col{border-radius:12px;padding:32px 30px 18px}
-.vs-wait{border:1px solid var(--line-l)}
-.vs-atk{background:var(--ink);color:var(--paper)}
-.vs-chip{display:inline-flex;font-weight:900;font-size:11px;letter-spacing:.1em;padding:4px 11px;border-radius:5px}
-.vs-wait .vs-chip{background:#EEE;color:var(--sub-l)}
-.vs-atk .vs-chip{background:var(--gold);color:#FFF8F3}
-.vs-col h3{font-size:19px;margin-top:15px;line-height:1.5}
-.vs-atk h3{color:var(--paper)}
-.vs-col dl{margin-top:12px}
-.vs-col dl div{padding:16px 0;border-top:1px solid var(--line-l)}
-.vs-atk dl div{border-top:1px solid var(--line-d)}
-.vs-col dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;color:var(--sub-l)}
-.vs-atk dt{color:var(--sub)}
-.vs-col dd{margin-top:4px;font-size:15.5px}
-.vs-wait dd{color:var(--sub-l)}
-.vs-atk dd{font-weight:700}
-.vs-bridge{margin-top:48px;font-size:clamp(19px,2.5vw,27px);font-weight:900;font-feature-settings:"palt";line-height:1.55;max-width:22em}
-.vs-bridge b{color:var(--gold-d)}
-
-/* ===== 04 料金（レフトアンカー：高額を左／中央おすすめ） ===== */
-.cmp{margin-top:20px;font-family:var(--mono);font-size:12.5px;color:var(--sub);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.svc-box{margin-top:26px;border:1px solid var(--line-d);border-radius:12px;padding:24px 26px}
-.svc-t{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--gold);display:flex;align-items:center;gap:8px}
-.svc-t::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
-.svc-lead{margin-top:12px;font-size:clamp(14px,1.7vw,16px);line-height:1.9;color:var(--paper)}
-.svc-lead b{color:var(--gold)}
-.cmp b{color:var(--paper)}
-.camp-badge{display:inline-flex;align-items:center;gap:8px;margin-top:34px;font-weight:900;font-size:12px;letter-spacing:.08em}
-.camp-badge i{font-style:normal;background:var(--ink);color:var(--paper);padding:4px 12px;border-radius:5px}
-.plans{margin-top:22px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;align-items:end}
-.plan{border:1px solid var(--line-l);border-radius:12px;padding:30px 26px;background:#fff;color:var(--ink)}
-.plan--rec{border:2px solid var(--gold);box-shadow:0 12px 34px rgba(220,66,39,.14);padding-top:44px;position:relative}
-.plan-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:#FFF8F3;font-weight:900;font-size:11.5px;letter-spacing:.06em;padding:5px 16px;border-radius:20px;white-space:nowrap}
-.plan-name{font-weight:900;font-size:20px}
-.plan-for{font-size:12.5px;color:var(--sub-l);margin-top:5px;line-height:1.6;min-height:2.6em}
-.plan-price{margin-top:20px;padding-top:18px;border-top:1px solid var(--line-l)}
-.plan-price s{font-family:var(--mono);font-size:13px;color:var(--sub-l);text-decoration:line-through}
-.plan-price .now{margin-top:3px;display:flex;align-items:baseline;gap:2px}
-.plan-price .now .yen{font-family:var(--mono);font-size:17px;font-weight:700}
-.plan-price .now .n{font-family:var(--mono);font-weight:700;font-size:40px;letter-spacing:-.02em;line-height:1}
-.plan-price .now .u{font-size:13px;color:var(--sub-l);font-weight:700;margin-left:2px}
-.plan-terms{margin-top:34px;font-family:var(--mono);font-size:13px;color:var(--sub);line-height:2}
-.plan-terms b{color:var(--paper);font-weight:700}
-.price-cta{margin-top:38px;display:flex;flex-wrap:wrap;align-items:center;gap:16px}
-.price-cta .micro{font-family:var(--mono);font-size:12px;color:var(--sub-l)}
-.roi{margin-top:28px;border:1px solid var(--line-d);border-radius:12px;padding:24px 26px}
-.roi-t{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.06em;color:var(--gold);display:flex;align-items:center;gap:8px}
-.roi-t::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
-.roi-lead{margin-top:13px;font-size:clamp(16px,2vw,20px);font-weight:700;line-height:1.65;color:var(--paper)}
-.roi-lead b{color:var(--gold)}
-.roi-note{margin-top:11px;font-family:var(--mono);font-size:11.5px;color:var(--sub);line-height:1.75}
-.roi-calc{margin-top:12px;font-size:13.5px;line-height:1.85;color:var(--sub)}
-.roi-calc b{color:var(--gold);font-weight:700}
-
-/* ===== 05 オファー＋フォーム一体型（dark） ===== */
-.offer-grid{margin-top:56px;display:grid;grid-template-columns:1fr 460px;gap:56px;align-items:start}
-.offer-h .l1{font-size:clamp(19px,2.4vw,27px);font-weight:900;font-feature-settings:"palt";line-height:1.5}
-.offer-h .l2{margin-top:10px;display:flex;align-items:baseline;flex-wrap:wrap;gap:0 8px}
-.offer-h .l2 .n{font-family:var(--mono);font-weight:700;font-size:clamp(72px,13vw,150px);line-height:.9;letter-spacing:-.04em;color:var(--gold)}
-.offer-h .l2 .u{font-size:clamp(26px,5vw,52px);font-weight:900}
-.offer-h .l2 .free{font-size:clamp(26px,5vw,52px);font-weight:900;color:var(--paper)}
-.gets{margin-top:40px}
-.get{display:grid;grid-template-columns:34px 1fr;gap:18px;padding:18px 0;border-top:1px solid var(--line-d);align-items:baseline}
-.get-no{font-family:var(--mono);font-weight:700;font-size:13px;color:var(--gold)}
-.get h3{font-size:16.5px;line-height:1.5}
-.get p{font-size:14px;color:var(--sub);margin-top:4px;line-height:1.75}
-.trust{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px 22px;border-top:1px solid var(--line-d);padding-top:26px}
-.trust dt{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--sub)}
-.trust dd{margin-top:3px}
-.trust dd .n{font-family:var(--mono);font-weight:700;font-size:29px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.trust dd .s{font-size:13px;font-weight:700;margin-left:2px}
-.trust dd .pre{font-size:12px;color:var(--sub);margin-right:3px}
-
-/* form card */
-.fcard{background:var(--paper);color:var(--ink);border-radius:14px;padding:34px 32px 30px;position:sticky;top:24px}
-.fprog-t{display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--sub-l)}
-.fprog{display:flex;gap:6px;margin-top:11px}
-.fprog span{flex:1;height:4px;border-radius:2px;background:var(--line-l);transition:background .3s}
-.fprog span.on{background:var(--gold)}
-.fcard-t{font-size:21px;font-weight:900;font-feature-settings:"palt";margin-top:24px;line-height:1.45}
-.fcard-s{font-size:13px;color:var(--sub-l);margin-top:6px}
-.field{margin-top:19px}
-.field label{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700;margin-bottom:8px}
-.field label .req{font-family:var(--mono);font-size:10px;color:var(--gold-d);font-weight:700}
-.field .inwrap{position:relative}
-.field input{width:100%;font-family:inherit;font-size:16px;color:var(--ink);background:#fff;border:1.5px solid var(--line-l);border-radius:8px;padding:14px 15px;transition:border-color .15s, box-shadow .15s;-webkit-appearance:none}
-.field input::placeholder{color:#B7BAB5}
-.field input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(193,59,34,.15)}
-.field input.ok{border-color:#3AA76D}
-.field input.err{border-color:#D6503A}
-.field .chk{position:absolute;right:13px;top:50%;transform:translateY(-50%);width:19px;height:19px;opacity:0;transition:opacity .15s}
-.field input.ok + .chk{opacity:1}
-.ferr{font-size:12px;color:#D6503A;margin-top:6px;min-height:0;font-weight:700}
-.fstep-actions{margin-top:24px}
-.fbtn{width:100%;font-size:17px;padding:17px}
-.fback{background:none;border:0;color:var(--sub-l);font-family:var(--mono);font-size:12.5px;cursor:pointer;margin-top:14px;padding:6px;width:100%;text-align:center}
-.fback:hover{color:var(--ink)}
-.fsafe{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center}
-.fsafe span{font-family:var(--mono);font-size:11px;color:var(--sub-l);display:flex;align-items:center;gap:5px}
-.fsafe span::before{content:"✓";color:#3AA76D;font-weight:700}
-.hide{display:none}
-
-/* ===== footer ===== */
-.ft{background:var(--ink);color:var(--sub);padding:56px 0 40px;border-top:1px solid var(--line-d)}
-.ft-in{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
-.ft .logo{color:var(--paper);font-weight:900;font-size:16px}
-.ft .logo span{display:block;font-family:var(--mono);font-weight:400;font-size:10px;color:var(--sub);margin-top:4px;letter-spacing:.04em}
-.ft small{font-family:var(--mono);font-size:11px;color:var(--sub);line-height:1.9}
-.hd .logo-img{height:34px;width:auto;display:block}
-.ft-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:26px 40px}
-.ft-brand{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.ft-logo{height:44px;width:auto;display:block}
-.ft-tag{font-family:var(--mono);font-size:12px;color:var(--sub);letter-spacing:.02em}
-.ft-credit{display:flex;flex-direction:column;gap:12px;align-items:flex-start}
-.ft-credit-lb{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--sub)}
-.ft-marks{display:flex;align-items:center;gap:20px}
-.ft-marks .mk-wu{height:20px;width:auto;display:block}
-.ft-marks .mk-jpx{height:54px;width:auto;display:block;border-radius:3px}
-.ft-bottom{margin-top:30px;padding-top:22px;border-top:1px solid var(--line-d);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px}
-.ft-bottom small{font-family:var(--mono);font-size:11px;color:var(--sub);line-height:1.85}
-
-/* ===== responsive ===== */
+/* 伝票（シグネチャー其の一） */
+.slip{
+  background:var(--sheet);border:1px solid var(--line);
+  box-shadow:0 18px 40px rgba(32,36,44,.13), 0 2px 6px rgba(32,36,44,.06);
+  transform:rotate(1.4deg);
+  font-family:var(--mono);
+  position:relative;margin-top:18px;
+}
+.slip .tape{
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-2.5deg);
+  width:118px;height:30px;background:rgba(228,224,206,.75);
+  box-shadow:0 1px 3px rgba(32,36,44,.12);
+}
+.perf{position:relative}
+.perf::after{
+  content:"";position:absolute;left:0;right:0;bottom:-5px;height:10px;
+  background-image:radial-gradient(circle at 5px 5px, var(--paper) 3.5px, transparent 3.5px);
+  background-size:15px 10px;
+}
+.slip-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 24px;border-bottom:1px solid var(--line);
+  font-size:10.5px;letter-spacing:.18em;color:var(--mute);
+}
+.stamp{
+  color:var(--shu);border:2px solid var(--shu);border-radius:50%;
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  font-family:var(--disp);font-size:13px;font-weight:800;
+  transform:rotate(-11deg);opacity:.85;flex:0 0 48px;
+}
+.slip-body{padding:20px 24px 6px}
+.slip-row{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px dotted var(--line-dk);font-size:12.5px}
+.slip-row .k{color:var(--ink-2)}
+.slip-row .v{font-weight:700}
+.slip-row .v.strike{color:var(--mute);text-decoration:line-through;text-decoration-color:var(--shu);text-decoration-thickness:2px}
+.slip-total{padding:20px 24px 6px;text-align:right}
+.slip-total .cap{font-size:10.5px;color:var(--mute);letter-spacing:.1em;display:block;margin-bottom:6px}
+.slip-total .amt{font-size:38px;font-weight:700;color:var(--shu);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.slip-total .amt small{font-size:14px;color:var(--ink);margin-left:5px;font-family:var(--body);font-weight:700}
+.slip-live{padding:14px 24px;border-top:1px dashed var(--line-dk);margin-top:14px;font-size:11.5px;color:var(--ink-2)}
+.slip-live .num{color:var(--shu);font-weight:700;font-variant-numeric:tabular-nums}
+.slip-live .of{color:var(--mute);font-size:10.5px;letter-spacing:.04em;white-space:nowrap}
+.slip-note{padding:0 24px 20px;font-size:10px;color:var(--mute);line-height:1.75;font-family:var(--body)}
 @media (max-width:920px){
-  .offer-grid{grid-template-columns:1fr;gap:44px}
-  .fcard{position:static}
-  .plans{grid-template-columns:1fr;gap:16px}
-  .plan--rec{order:-1}
-  .proof-nums{grid-template-columns:1fr 1fr;gap:26px 20px}
+  .hero{padding:44px 0 64px}
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .slip{transform:rotate(.8deg);max-width:440px;margin-top:0}
 }
 @media (max-width:680px){
-  .hd-tel .t{display:none}
-  .vs{grid-template-columns:1fr}
-  .case{grid-template-columns:1fr;gap:18px;align-items:start}
-  .case-viz{align-items:flex-start}
-  .trust{grid-template-columns:1fr 1fr}
-  .hero-in{padding-top:104px}
-  .pain-bridge,.plan{padding-left:24px;padding-right:24px}
+  /* 文字を折り返させない範囲まで詰める（唯一のCTAなので割れると目立つ） */
+  .hero-cta .btn{width:100%;font-size:14.5px;padding:19px 22px;gap:8px}
 }
 
+/* ---------- 支援先の業種帯（BtoB最強の信頼要素の代替） ---------- */
+.logobar{border-top:1px solid var(--line-dk);border-bottom:1px solid var(--line-dk);background:var(--sheet)}
+.logobar .wrap{display:flex;align-items:center;gap:clamp(16px,3vw,40px);padding-top:20px;padding-bottom:20px;flex-wrap:wrap}
+.logobar .lb-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--mute);white-space:nowrap}
+.logobar ul{display:flex;gap:clamp(14px,2.6vw,34px);flex-wrap:wrap;list-style:none}
+.logobar li{font-family:var(--disp);font-weight:800;font-size:clamp(13px,1.5vw,16px);color:var(--ink-2);white-space:nowrap}
+.logobar .lb-n{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--ink);white-space:nowrap}
+.logobar .lb-n b{color:var(--shu);font-size:19px;font-weight:700}
+@media (max-width:760px){ .logobar .lb-n{margin-left:0} }
 
-/* ===== AIスコアリングパネル（物証・ゴールドは契約期待のみ） ===== */
-.sp{--sp-grid:30px minmax(120px,1fr) 122px 82px minmax(160px,1.3fr);
-  background:linear-gradient(180deg,#1C2B49,#15223B);
-  border:1px solid rgba(244,245,242,.10);border-radius:14px;overflow:hidden;
-  box-shadow:0 42px 84px -34px rgba(0,0,0,.82), 0 0 0 1px rgba(0,0,0,.4);color:var(--paper)}
-.sp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:18px 20px 15px;border-bottom:1px solid rgba(244,245,242,.08)}
-.sp-eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--sub);font-weight:700;display:flex;align-items:center;gap:8px}
-.sp-spark{width:6px;height:6px;border-radius:50%;background:#C6CBD2;box-shadow:0 0 0 3px rgba(198,203,210,.14)}
-.sp-title{font-size:19px;font-weight:900;margin-top:7px;letter-spacing:.01em}
-.sp-sub{font-size:11.5px;color:var(--sub);margin-top:5px}
-.sp-sub b{color:var(--paper);font-weight:700}
-.sp-live{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;color:#7FD8A6;letter-spacing:.02em;white-space:nowrap;flex-shrink:0;padding-top:3px}
-.sp-dot{width:7px;height:7px;border-radius:50%;background:#3ED27E;box-shadow:0 0 7px #3ED27E;animation:blink 1.6s ease-in-out infinite}
-.sp-cols{display:grid;grid-template-columns:var(--sp-grid);gap:12px;align-items:center;padding:11px 20px;background:rgba(0,0,0,.16);border-bottom:1px solid rgba(244,245,242,.07);font-size:9.5px;font-weight:700;letter-spacing:.05em;color:var(--sub-l)}
-.sp-cols .hc-rank{text-align:center}
-.sp-cols .hc-e{text-align:center;color:var(--gold)}
-.sp-cols .hc-ss{display:flex}
-.sp-cols .hc-ss span{flex:1;text-align:center}
-.pr{display:grid;grid-template-columns:var(--sp-grid);gap:12px;align-items:center;padding:12px 20px;border-bottom:1px solid rgba(244,245,242,.06)}
-.pr:last-child{border-bottom:none}
-.pr:nth-child(even){background:rgba(255,255,255,.015)}
-.pr-rank{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gold);text-align:center;opacity:.82}
-.pr-co{min-width:0}
-.pr-mask{display:block;height:9px;border-radius:3px;background:linear-gradient(90deg,rgba(244,245,242,.26),rgba(244,245,242,.09));box-shadow:inset 0 0 0 1px rgba(244,245,242,.06)}
-.pr-tag{display:inline-block;margin-top:8px;font-size:10px;font-weight:700;color:#C6CBD2;border:1px solid rgba(244,245,242,.16);border-radius:5px;padding:2px 7px}
-.pr-feat{display:block;font-size:11px;color:var(--sub);margin-top:7px;line-height:1.4}
-.pr-ss{display:flex}
-.pr-ss span{flex:1;text-align:center;font-family:var(--mono);font-size:14px;font-weight:600;color:#B9BEC5}
-.pr-e{text-align:center}
-.pr-e-n{font-family:var(--mono);font-size:27px;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-.01em;text-shadow:0 0 18px rgba(232,95,66,.28)}
-.pr-e-bar{display:block;height:3px;border-radius:2px;background:rgba(232,95,66,.18);margin:7px auto 0;width:52px;overflow:hidden}
-.pr-e-bar i{display:block;height:100%;background:linear-gradient(90deg,#E85F42,#F2937B)}
-.pr-r{font-size:11.5px;color:var(--sub);line-height:1.5;min-width:0}
-.sp-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 20px;border-top:1px solid rgba(244,245,242,.08);background:rgba(0,0,0,.18);font-size:10.5px;color:var(--sub-l)}
-.sp-eng{font-family:var(--mono);color:var(--gold);letter-spacing:.05em;font-weight:700;font-size:10px;white-space:nowrap}
-@media(max-width:980px){
-  .sp{--sp-grid:auto 1fr auto}
-  .sp-cols{display:none}
-  .pr{grid-template-columns:auto 1fr auto;grid-template-areas:"rank co exp" "reason reason reason";row-gap:9px;column-gap:14px;padding:14px 16px}
-  .pr-rank{grid-area:rank;align-self:start;padding-top:3px}
-  .pr-co{grid-area:co}
-  .pr-e{grid-area:exp;align-self:center}
-  .pr-r{grid-area:reason}
-  .pr-ss{display:none}
-  .pr-e-n{font-size:24px}
-  .sp-head{padding:16px}
+/* ============================================================
+   AIスコアリング盤（#offer ポイント01の物証として同居）
+   ============================================================ */
+.score-card{
+  background:var(--ink);color:#E7E8EB;overflow:hidden;
+  font-family:var(--mono);font-size:12px;
+  box-shadow:0 22px 48px rgba(32,36,44,.25);
+  transform:rotate(-.5deg);
 }
-@media(max-width:420px){.sp-title{font-size:17px}.pr-feat{font-size:10.5px}}
+.score-head{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:15px 20px;border-bottom:1px solid rgba(255,255,255,.14);
+  font-size:10px;letter-spacing:.18em;color:#9AA0AC;
+}
+.score-head .live{color:#FF7A5C;display:flex;align-items:center;gap:6px;white-space:nowrap}
+.score-head .live::before{content:"●";font-size:7px}
+@media (prefers-reduced-motion: no-preference){
+  .score-head .live::before{animation:blink 1.6s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+}
+.tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.score-table{width:100%;min-width:520px;border-collapse:collapse}
+.score-table th{text-align:left;font-weight:400;font-size:10px;color:#848B99;padding:11px 12px;border-bottom:1px solid rgba(255,255,255,.1);letter-spacing:.1em}
+.score-table td{padding:12px;border-bottom:1px solid rgba(255,255,255,.07);vertical-align:top}
+.score-table .co b{display:block;font-size:12px;color:#fff}
+.score-table .co span{font-size:10px;color:#848B99}
+.score-table .sc{font-weight:700;color:#fff;font-variant-numeric:tabular-nums;font-size:14px}
+.score-table .sc.hi{color:#FF7A5C}
+.score-table .why{font-size:10.5px;color:#B4BAC6;font-family:var(--body);line-height:1.65;max-width:210px}
+/* オファー左段（約460px）に収めるための圧縮指定 */
+.pt .score-card{margin-top:18px;transform:none;box-shadow:0 14px 32px rgba(32,36,44,.20)}
+.pt .score-table{min-width:0}
+.pt .score-table th,.pt .score-table td{padding:9px 8px}
+.pt .score-table .why{font-size:10px;line-height:1.55;max-width:none}
+.pt .score-table .co b{font-size:11.5px}
+.pt .score-head{padding:13px 14px;font-size:9.5px;letter-spacing:.12em}
+.score-note{padding:11px 14px 13px;font-size:10px;color:#848B99;font-family:var(--body);line-height:1.7;border-top:1px solid rgba(255,255,255,.07)}
 
-
-.proof-nums .avg{display:block;margin-top:8px;font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--sub);letter-spacing:.02em}
-.trust .avg{display:block;margin-top:4px;font-family:var(--mono);font-size:11px;font-weight:500;color:var(--sub)}
-
-.engine-panel{max-width:1040px;margin:36px auto 0}
-.engine-note{font-size:12px;color:var(--sub);margin-top:16px;font-family:var(--mono);text-align:center}
-@media(max-width:980px){.engine-panel{margin-top:26px}}
-
-/* v-improve: trust / engine-cta / fdisc / faq */
-.hero-trust{margin-top:16px;font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--sub)}
-.engine-cta{text-align:center;margin-top:30px}
-.fdisc{font-size:12px;line-height:1.8;color:var(--sub);margin:18px 0 0}
-#faq .faq{max-width:780px;margin:34px auto 0;border-top:1px solid var(--line-l)}
-#faq details{border-bottom:1px solid var(--line-l)}
-#faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 4px;font-weight:700;font-size:15.5px;color:var(--ink)}
-#faq summary::-webkit-details-marker{display:none}
-#faq summary::after{content:"＋";font-family:var(--mono);font-size:16px;color:var(--sub-l);flex:0 0 auto}
-#faq details[open] summary::after{content:"−"}
-#faq details p{margin:0;padding:0 4px 22px;font-size:14.5px;line-height:2;color:var(--sub-l)}
-@media(max-width:980px){#faq summary{font-size:14.5px;padding:18px 2px}}
-
-@media(min-width:2000px){
-  .hero h1{font-size:clamp(66px,3.7vw,94px)}
-  .hero-eyebrow{font-size:14px}
-  .hero-lead{max-width:32em;font-size:18px}
-  .hero-svc{max-width:35em;font-size:15.5px}
-  .counter{max-width:600px;padding:26px 30px}
-  .counter .num{font-size:64px}
+/* ============================================================
+   PAIN：一枚の帳簿。3枚のカードではなく、1つの勘定として読ませる
+   ============================================================ */
+.ledger{
+  background:var(--sheet);border:1px solid var(--line-dk);
+  box-shadow:0 20px 46px rgba(32,36,44,.10);
+  position:relative;transform:rotate(-.35deg);
+}
+.ledger-in{transform:rotate(.35deg)}
+.ledger-head{
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+  padding:20px clamp(20px,3.4vw,34px);border-bottom:1px solid var(--ink);
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ink-2);
+}
+.ledger-head .lg-term{color:var(--mute);letter-spacing:.1em}
+.ledger-cols{
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1.15fr) 126px;gap:clamp(16px,2.4vw,34px);
+  padding:9px clamp(20px,3.4vw,34px);background:var(--paper-2);
+  border-bottom:1px solid var(--line-dk);
+  font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;color:var(--mute);
+}
+.ledger-cols span:last-child{text-align:right}
+.lrow{
+  display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1.15fr) 126px;gap:clamp(16px,2.4vw,34px);
+  align-items:baseline;padding:24px clamp(20px,3.4vw,34px);
+  border-bottom:1px dotted var(--line-dk);
+}
+.lrow-k{font-size:clamp(16px,1.6vw,19px);line-height:1.62;position:relative}
+.lrow-k .lno{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--mute);
+  font-weight:700;display:block;margin-bottom:7px;
+}
+.lrow-d{font-size:13.5px;color:var(--ink-2);line-height:1.85}
+.lrow-v{text-align:right;font-family:var(--mono)}
+.lrow-v b{display:block;font-size:19px;font-weight:700;color:var(--ink);letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.lrow-v b small{font-size:11px;color:var(--mute);margin-left:2px;font-weight:700}
+.lrow-v .lrow-n{display:block;margin-top:5px;font-size:10px;letter-spacing:.12em;color:var(--mute)}
+.ledger-total{
+  display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;
+  padding:26px clamp(20px,3.4vw,34px) 22px;border-top:2px solid var(--ink);background:var(--paper-2);
+}
+.ledger-total .lt-k{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--ink-2)}
+.ledger-total .lt-v{
+  font-family:var(--disp);font-weight:800;font-size:clamp(38px,5vw,62px);line-height:1;
+  color:var(--shu);font-variant-numeric:tabular-nums;letter-spacing:-.01em;
+}
+.ledger-total .lt-v small{font-size:.34em;font-family:var(--body);color:var(--ink);margin-left:4px}
+.ledger-note{padding:0 clamp(20px,3.4vw,34px) 20px;font-size:10.5px;color:var(--mute);line-height:1.75}
+.pain-close{margin-top:56px;display:grid;grid-template-columns:auto 1fr;gap:26px}
+.pain-close::before{content:"";width:4px;background:var(--shu)}
+.pain-close .q{font-family:var(--disp);font-weight:800;font-size:clamp(20px,2.6vw,27px);line-height:1.7;margin-bottom:10px}
+.pain-close .a{font-size:14.5px;color:var(--ink-2);max-width:44em}
+@media (max-width:820px){
+  .ledger-cols{display:none}
+  .lrow{grid-template-columns:1fr auto;gap:8px 20px}
+  .lrow-k{grid-column:1}
+  .lrow-v{grid-column:2;grid-row:1;align-self:start}
+  .lrow-d{grid-column:1 / -1}
 }
 
-/* ===== design-refresh: 明朝の声・紙質感・損失ティッカー・モーション ===== */
-/* 事例の引用と決めのブリッジ文は"声"を明朝に統一 */
-.case-body .q{font-family:var(--serif);font-weight:700;letter-spacing:.03em}
-.pain-bridge p:first-child,.vs-bridge{font-family:var(--serif);font-weight:800;letter-spacing:.03em}
-.offer-h .l2 .free{font-family:var(--serif);font-weight:800}
-
-/* 暗部にごく薄いグレイン（紙質感／フラット感の除去） */
-.hero::after,.dark::after{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:overlay;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+/* ============================================================
+   PROOF：巨大数字を罫で仕切る／事例は編集記事
+   ============================================================ */
+.bignums{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--line-dk);
+  margin:0 0 72px;
 }
-.dark{position:relative}
-.dark>.wrap{position:relative;z-index:1}
-.hero-veil{background:
-  radial-gradient(120% 90% at 18% 40%, transparent 0%, rgba(6,12,23,.42) 100%),
-  linear-gradient(90deg, rgba(9,16,28,.97) 0%, rgba(9,16,28,.90) 40%, rgba(9,16,28,.72) 68%, rgba(9,16,28,.40) 85%, rgba(9,16,28,.28) 100%)}
+.bignum{padding:36px 28px 30px;position:relative}
+.bignum + .bignum{border-left:1px solid var(--line-dk)}
+.bignum .cap{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:var(--mute);display:block;margin-bottom:10px}
+.bignum .n{font-family:var(--disp);font-weight:800;font-size:clamp(44px,6vw,84px);line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.bignum .n b{color:var(--shu)}
+.bignum .n small{font-size:.34em;font-family:var(--body);font-weight:700;margin-left:4px;letter-spacing:0}
+.bignum .sub{font-size:11.5px;color:var(--mute);margin-top:8px}
+@media (max-width:760px){
+  .bignums{grid-template-columns:1fr}
+  .bignum + .bignum{border-left:none;border-top:1px solid var(--line-dk)}
+}
+/* 主役の1本：全幅・大組み */
+.case-lead{
+  display:grid;grid-template-columns:minmax(0,1fr) clamp(230px,26%,310px);
+  gap:clamp(28px,5vw,72px);align-items:center;
+  padding:40px 0 44px;border-top:2px solid var(--ink);border-bottom:1px solid var(--line-dk);
+}
+@media (max-width:820px){ .case-lead{grid-template-columns:1fr;gap:30px} }
+.case-lead .tag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--mute);margin-bottom:18px}
+.case-lead .tag b{color:var(--ink-2)}
+.case-lead blockquote{font-family:var(--disp);font-weight:800;font-size:clamp(24px,3.4vw,40px);line-height:1.55;margin-bottom:18px;letter-spacing:.005em}
+.case-lead blockquote::before{content:"「";color:var(--shu)}
+.case-lead blockquote::after{content:"」";color:var(--shu)}
+.case-lead-copy > p:last-child{font-size:14.5px;color:var(--ink-2);max-width:40em;line-height:1.9}
+.case-lead-fig{border-left:1px solid var(--line-dk);padding-left:clamp(20px,3vw,38px)}
+@media (max-width:820px){ .case-lead-fig{border-left:none;border-top:1px solid var(--line-dk);padding:22px 0 0} }
+.cl-cap{font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--mute);display:block;margin-bottom:14px}
+.cl-nums{display:flex;align-items:baseline;gap:12px;font-family:var(--disp);font-weight:800;font-variant-numeric:tabular-nums}
+.cl-from{font-size:clamp(24px,3vw,34px);color:var(--mute);text-decoration:line-through;text-decoration-color:var(--shu);text-decoration-thickness:2px}
+.cl-from small,.cl-to small{font-size:.44em;font-family:var(--body);margin-left:1px}
+.cl-arrow{font-family:var(--mono);color:var(--shu);font-size:18px;font-weight:700}
+.cl-to{font-size:clamp(40px,5.4vw,64px);color:var(--shu);line-height:1}
+.cl-mult{display:inline-block;margin-top:14px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--ink-2);border:1px solid var(--line-dk);padding:5px 12px}
+/* 従の3本：小さく、罫で並べる */
+.cases-sub{display:grid;grid-template-columns:repeat(3,1fr);gap:0 clamp(24px,3.4vw,48px);margin-top:8px}
+@media (max-width:860px){ .cases-sub{grid-template-columns:1fr} }
+.case{padding:26px 0 24px;border-top:1px solid var(--line);display:flex;flex-direction:column}
+.case .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--mute);margin-bottom:10px}
+.case .tag b{color:var(--ink-2)}
+.case blockquote{font-family:var(--disp);font-weight:800;font-size:15px;line-height:1.7;margin-bottom:9px}
+.case blockquote::before{content:"「";color:var(--shu)}
+.case blockquote::after{content:"」";color:var(--shu)}
+.case p{font-size:12.5px;color:var(--ink-2);flex:1;max-width:36em;line-height:1.85}
+.case .res{margin-top:14px;display:flex;align-items:baseline;gap:9px;font-family:var(--mono);flex-wrap:wrap}
+.case .res .from{font-size:11px;color:var(--mute);text-decoration:line-through;text-decoration-color:var(--shu);text-decoration-thickness:2px}
+.case .res .arrow{color:var(--shu);font-weight:700;font-size:12px}
+.case .res .to{font-size:13.5px;font-weight:700;color:var(--shu)}
+.case .res .cap{font-size:9.5px;color:var(--mute);font-family:var(--body)}
+.proof-legal{margin-top:24px;font-size:11.5px;color:var(--mute)}
+.proof-cta{margin-top:40px;padding-top:26px;border-top:1px solid var(--line-dk)}
 
-/* signature: 損失ティッカー（実レート・本日消化ぶん） */
-.counter{box-shadow:inset 0 1px 0 rgba(244,245,242,.06)}
-.counter-tick{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(232,95,66,.32);
-  font-family:var(--mono);font-size:12px;color:var(--sub);letter-spacing:.02em;line-height:1.7}
-.counter-tick b{color:var(--gold);font-weight:700;font-variant-numeric:tabular-nums;font-size:14px}
+/* ============================================================
+   FUTURE：墨の帯。中央罫で二分
+   ============================================================ */
+#future{background:var(--ink);color:#E7E8EB;border-top:none}
+#future .gno{-webkit-text-stroke:1px rgba(255,255,255,.14)}
+#future .kicker{color:#FF7A5C}
+#future h2{color:#fff}
+#future .lead{color:#B4BAC6}
+.vs{display:grid;grid-template-columns:1fr 1fr;margin-top:64px;border-top:1px solid rgba(255,255,255,.2)}
+@media (max-width:860px){ .vs{grid-template-columns:1fr} }
+.vs-col{padding:44px clamp(20px,4vw,56px) 40px}
+/* 待ち列は攻め列（dd=#fff）に対して沈ませる。7.98:1 では落差が出ず対比が死ぬため、
+   AA（4.5:1）を確保できる範囲で暗く戻した。dt の #8E95A3 より明るく、階層は保つ。 */
+.vs-col.wait{color:#9EA5B3}          /* 6.29:1 */
+.vs-col.go{border-left:1px solid rgba(255,255,255,.2)}
+@media (max-width:860px){ .vs-col.go{border-left:none;border-top:1px solid rgba(255,255,255,.2)} }
+.vs-col h3{font-size:clamp(21px,2.6vw,28px);margin-bottom:4px}
+.vs-col.wait h3{color:#CBD0D9;text-decoration:line-through;text-decoration-color:var(--shu);text-decoration-thickness:2.5px}
+.vs-col.go h3{color:#fff}
+.vs-col.go h3 .aka2{color:#FF7A5C}
+.vs-col .sub{font-size:12.5px;margin-bottom:26px}
+.vs-col.go .sub{color:#B4BAC6}
+.vs-col dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;padding-top:15px;color:#8E95A3}
+.vs-col.go dt{color:#8E95A3}
+.vs-col dd{font-size:14.5px;font-weight:500;padding:4px 0 15px;border-bottom:1px dashed rgba(140,147,160,.3)}
+.vs-col dd:last-of-type{border-bottom:none}
+.vs-col.go dd{color:#fff}
+/* 墨帯はこの行で閉じる。セクション側の下パディングは0で、
+   帯の終端はこの最終行が持つ行送りぶんだけ（死に余白をつくらない） */
+.vs-close{margin-top:44px;padding-bottom:56px;font-size:15px;color:#CBD0D9;max-width:44em}
+.vs-close b{color:#FF7A5C}
 
-/* ヒーローのロード・ステージング（1回だけのオーケストレーション） */
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-.hero-in>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
-.hero-in>*:nth-child(1){animation-delay:.05s}
-.hero-in>*:nth-child(2){animation-delay:.14s}
-.hero-in>*:nth-child(3){animation-delay:.26s}
-.hero-in>*:nth-child(4){animation-delay:.34s}
-.hero-in>*:nth-child(5){animation-delay:.46s}
-.hero-in>*:nth-child(6){animation-delay:.60s}
-.hero-in>*:nth-child(7){animation-delay:.70s}
+/* ============================================================
+   PRICE：縦罫の紙面。カードはクリック可能なまま
+   ============================================================ */
+.price-inc{
+  border-left:4px solid var(--shu);padding:6px 0 6px 26px;
+  margin:0 0 56px;font-size:14.5px;color:var(--ink-2);max-width:52em;
+}
+.price-inc b{color:var(--ink)}
+.camp{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--shu);margin-bottom:26px;font-weight:700}
+.plans{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--ink);border-bottom:1px solid var(--line-dk)}
+@media (max-width:900px){ .plans{grid-template-columns:1fr} }
+.plan{
+  display:flex;flex-direction:column;padding:40px 30px 32px;position:relative;cursor:pointer;
+  transition:background .18s ease;
+}
+.plan + .plan{border-left:1px solid var(--line-dk)}
+@media (max-width:900px){ .plan + .plan{border-left:none;border-top:1px solid var(--line-dk)} }
+.plan::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;
+  background:var(--shu);transform:scaleX(0);transform-origin:left;transition:transform .22s ease;
+}
+.plan:hover{background:var(--sheet)}
+.plan:hover::after{transform:scaleX(1)}
+.plan .rec-stamp{
+  position:absolute;top:20px;right:18px;
+  color:var(--shu);border:2px solid var(--shu);border-radius:50%;
+  width:74px;height:74px;display:flex;align-items:center;justify-content:center;
+  font-family:var(--disp);font-size:13px;font-weight:800;line-height:1;text-align:center;
+  letter-spacing:-.02em;white-space:nowrap;
+  transform:rotate(9deg);opacity:.9;
+}
+.plan h3{font-size:21px;margin-bottom:8px}
+.plan .for{font-size:12.5px;color:var(--ink-2);line-height:1.75;min-height:3.4em;margin-bottom:22px;max-width:22em}
+.plan .amt{font-family:var(--disp);font-variant-numeric:tabular-nums;margin-bottom:22px}
+.plan .amt .num{font-size:clamp(46px,5vw,64px);font-weight:800;letter-spacing:-.02em;line-height:1}
+.plan .amt .unit{font-size:13px;color:var(--mute);font-family:var(--body);font-weight:700}
+.plan .go{
+  margin-top:auto;display:flex;align-items:baseline;gap:8px;
+  font-size:13px;font-weight:700;color:var(--shu);
+}
+.plan .go .ar{font-family:var(--mono);transition:transform .18s ease}
+.plan:hover .go .ar{transform:translateX(4px)}
+.price-terms{font-size:12.5px;color:var(--mute);margin-top:20px}
+.roi{margin-top:64px;display:grid;grid-template-columns:auto 1fr;gap:26px;max-width:56em}
+.roi::before{content:"";width:1px;background:var(--line-dk)}
+.roi h3{font-size:17px;margin-bottom:10px}
+.roi p{font-size:14px;color:var(--ink-2)}
+.roi .legal{font-size:11.5px;color:var(--mute);margin-top:10px}
+.price-cta{margin-top:64px;padding-top:36px;border-top:1px solid var(--line-dk)}
 
-/* スクロールリビール（JSがIntersectionObserver対応時のみ付与） */
-.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+/* ---------- 導入の流れ ---------- */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--line-dk)}
+@media (max-width:860px){ .flow{grid-template-columns:1fr 1fr} }
+@media (max-width:520px){ .flow{grid-template-columns:1fr} }
+.flow .fstep{padding:32px 24px 28px;position:relative}
+.flow .fstep + .fstep{border-left:1px solid var(--line-dk)}
+@media (max-width:860px){
+  .flow .fstep:nth-child(3){border-left:none}
+  .flow .fstep:nth-child(n+3){border-top:1px solid var(--line-dk)}
+}
+@media (max-width:520px){
+  .flow .fstep + .fstep{border-left:none;border-top:1px solid var(--line-dk)}
+}
+.flow .fn{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--shu);font-weight:700;display:block;margin-bottom:12px}
+.flow h3{font-family:var(--body);font-size:15.5px;font-weight:700;margin-bottom:8px;line-height:1.6}
+.flow p{font-size:13px;color:var(--ink-2)}
+.flow .when{margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--mute)}
+
+/* ============================================================
+   FAQ：索引
+   ============================================================ */
+.faq-list{border-top:1px solid var(--ink);max-width:900px}
+.faq-list details{border-bottom:1px solid var(--line-dk)}
+.faq-list summary{
+  cursor:pointer;list-style:none;display:grid;grid-template-columns:56px 1fr auto;gap:16px;align-items:baseline;
+  padding:24px 4px;font-family:var(--disp);font-weight:800;font-size:16.5px;line-height:1.65;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .qn{font-family:var(--mono);color:var(--shu);font-weight:700;font-size:12px;letter-spacing:.1em}
+.faq-list summary .pm{color:var(--mute);font-family:var(--mono);font-weight:400}
+.faq-list details[open] summary .pm::before{content:"−"}
+.faq-list details:not([open]) summary .pm::before{content:"＋"}
+.faq-list .ans{padding:0 4px 26px 72px;font-size:14.5px;color:var(--ink-2);max-width:46em}
+@media (max-width:680px){
+  .faq-list summary{grid-template-columns:40px 1fr auto;font-size:15px}
+  .faq-list .ans{padding-left:56px}
+}
+
+/* ============================================================
+   OFFER：申込伝票（シグネチャー其の二）
+   ============================================================ */
+.offer-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:72px;align-items:start}
+@media (max-width:920px){ .offer-grid{grid-template-columns:1fr;gap:48px} }
+.offer-copy h2 .big{font-family:var(--disp);color:var(--shu);font-size:1.32em;font-variant-numeric:tabular-nums}
+.offer-points{margin-top:40px;border-top:1px solid var(--line-dk)}
+.offer-points .pt{display:grid;grid-template-columns:56px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.offer-points .n{font-family:var(--mono);font-size:12px;color:var(--shu);font-weight:700;letter-spacing:.1em;padding-top:3px}
+.offer-points h3{font-family:var(--body);font-size:15px;font-weight:700;margin-bottom:4px}
+.offer-points p{font-size:13.5px;color:var(--ink-2);max-width:34em}
+.offer-stats{display:flex;gap:26px;margin-top:26px;font-family:var(--mono);font-size:12px;color:var(--mute);flex-wrap:wrap}
+.offer-stats b{color:var(--ink);font-size:16px}
+.offer-stats b i{color:var(--shu);font-style:normal}
+/* 狭幅では番号のインデントを畳み、スコア盤に本文幅を渡す */
+@media (max-width:680px){
+  .offer-points .pt{grid-template-columns:1fr;gap:6px}
+  .offer-points .n{padding-top:0}
+}
+
+.form-card{
+  background:var(--sheet);border:1px solid var(--line);
+  box-shadow:0 22px 50px rgba(32,36,44,.13);
+  padding:0 0 28px;scroll-margin-top:86px;
+  transform:rotate(.4deg);position:relative;
+  font-family:var(--body);
+}
+.form-in{transform:rotate(-.4deg);padding:0 32px}
+.form-slip-head{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 32px;border-bottom:1px solid var(--line);
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--mute);
+  margin-bottom:26px;
+}
+.form-prog{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.form-prog .bar{flex:1;height:3px;background:var(--paper-2);overflow:hidden}
+.form-prog .bar i{display:block;height:100%;width:50%;background:var(--shu);transition:width .3s ease}
+.form-prog.s2 .bar i{width:100%}
+.form-meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;color:var(--mute);letter-spacing:.12em;margin-bottom:20px}
+.form-card h3{font-size:22px;margin-bottom:8px}
+.form-card .fhint{font-size:13px;color:var(--ink-2);margin-bottom:22px}
+.fld{margin-bottom:18px}
+.fld label{display:block;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.08em;margin-bottom:7px;color:var(--ink-2)}
+.fld label .req{color:var(--shu);font-size:10px;border:1px solid var(--shu);padding:1px 6px;margin-left:8px;vertical-align:1px}
+.fld input{
+  width:100%;padding:14px 15px;font-size:16px;font-family:var(--body);
+  border:1px solid var(--line-dk);background:#fff;color:var(--ink);
+  transition:border-color .15s ease;border-radius:0;
+}
+.fld input:focus{outline:none;border-color:var(--ink)}
+.fld input.err{border-color:var(--shu);background:#FCF2EF}
+.fld input.ok{border-color:var(--ok)}
+.fld .emsg{font-size:12px;color:var(--shu);min-height:18px;margin-top:4px}
+.form-card .btn{width:100%;font-size:16.5px}
+.back-link{display:inline-block;margin-top:14px;font-size:13px;color:var(--mute);cursor:pointer;background:none;border:none;font-family:var(--body)}
+.back-link:hover{color:var(--ink)}
+.form-legal{margin-top:18px;font-size:11px;color:var(--mute);line-height:1.8}
+.form-badges{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-2)}
+.form-badges span{display:flex;align-items:center;gap:5px}
+.form-badges span::before{content:"✓";color:var(--ok);font-weight:700}
+.hide{display:none}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{background:var(--ink);color:#9AA0AC;padding:52px 0 44px;font-size:12.5px}
+footer .ft-msg{font-family:var(--disp);color:#E7E8EB;font-size:19px;font-weight:800;margin-bottom:18px}
+footer .ft-msg b{color:#FF7A5C}
+footer p{max-width:52em;line-height:1.9}
+footer .cr{margin-top:20px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em}
+
+/* ---------- リビール ---------- */
+.rv{opacity:0;transform:translateY(12px);transition:opacity .6s ease, transform .6s ease}
 .rv.in{opacity:1;transform:none}
-
-@media (prefers-reduced-motion:reduce){
-  .hero-in>*{animation:none}
-  .rv{opacity:1;transform:none;transition:none}
+@media (prefers-reduced-motion: reduce){ .rv{opacity:1;transform:none;transition:none} }
+/* ホバーの移動量は動きに敏感な利用者には出さない（色の変化だけ残す） */
+@media (prefers-reduced-motion: reduce){
+  .btn:hover,.btn:hover .ar,.plan:hover .go .ar,.txt-cta:hover .ar{transform:none}
+}
+/* ============================================================
+   追従CTA（パターンfのみ／A/Bの検証変数）
+   実測: 30%未満はまだ読み始め、80%以降はフォームに到達済みのため、
+   その間だけ出す。読んでいる最中の視界は塞がない。
+   ============================================================ */
+.sticky-cta{
+  position:fixed;z-index:60;
+  display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  background:var(--shu);color:#fff;border:1px solid var(--shu);
+  font-family:var(--body);font-weight:700;letter-spacing:.04em;
+  text-decoration:none;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .2s ease,transform .2s ease,background .16s ease,box-shadow .16s ease;
+}
+.sticky-cta.is-on{opacity:1;visibility:visible;pointer-events:auto}
+.sticky-cta .sc-main{display:inline-flex;align-items:center;gap:10px}
+/* BRAND 6項：CTAの周辺には必ず障壁除去の一文を添える */
+.sticky-cta .sc-note{font-family:var(--mono);font-weight:400;letter-spacing:.08em;opacity:.85}
+.sticky-cta .ar{font-family:var(--mono);transition:transform .16s ease}
+.sticky-cta:hover{background:var(--shu-dk);border-color:var(--shu-dk)}
+.sticky-cta:hover .ar{transform:translateX(4px)}
+.sticky-cta:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+/* PC: 右下に置く */
+@media (min-width:861px){
+  .sticky-cta{right:28px;bottom:28px;padding:18px 30px;font-size:16px;
+    box-shadow:0 16px 40px rgba(20,24,32,.32), 0 3px 10px rgba(20,24,32,.18);
+    transform:translateY(10px)}
+  .sticky-cta .sc-note{font-size:10.5px}
+  .sticky-cta.is-on{transform:translateY(0)}
+  .sticky-cta:hover{box-shadow:0 20px 48px rgba(20,24,32,.38), 0 3px 10px rgba(20,24,32,.2)}
+}
+/* SP: 下端のバー（2行だが高さは抑える） */
+@media (max-width:860px){
+  .sticky-cta{left:0;right:0;bottom:0;padding:13px 16px;font-size:15px;
+    border-left:0;border-right:0;border-bottom:0;transform:translateY(100%);
+    box-shadow:0 -6px 24px rgba(20,24,32,.22)}
+  .sticky-cta .sc-note{font-size:10px}
+  .sticky-cta.is-on{transform:translateY(0)}
+}
+/* 動きに敏感な利用者にはフェードも移動もせず即時表示 */
+@media (prefers-reduced-motion: reduce){
+  .sticky-cta{transition:none;transform:none}
+  .sticky-cta.is-on{transform:none}
+  .gh .btn{transition:none}
+  body.sticky-on .gh .btn{transform:none}
 }
 </style>
 </head>
 <body>
 
-<!-- ============ HERO ============ -->
-<header class="hd">
-  <div class="hd-in">
-    <a class="logo" href="#" aria-label="インサイトセールス"><img class="logo-img" src="data:image/webp;base64,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" alt="インサイトセールス"></a>
-    <div class="hd-tel">
-      <div class="t"><b>03-5784-0700</b><span>平日 10:00-19:00</span></div>
-      <a href="#form" class="hd-cta">100社リストを受け取る</a>
+<!-- ============ HEADER ============ -->
+<header class="gh">
+  <div class="wrap">
+    <div class="brand">インサイトセールス<small>INSIGHT SALES</small></div>
+    <div class="gh-tel">
+      <a href="tel:05031962821">050-3196-2821</a>
+      <span>平日 10:00-19:00</span>
     </div>
+    <a class="btn" href="#form" data-cta="header">100社リスト<span class="lg">を受け取る</span></a>
   </div>
 </header>
 
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('hero-bg.webp')"></div>
-  <div class="hero-veil"></div>
-  <div class="hero-in">
-    <p class="hero-eyebrow">比較媒体に載せている制作会社の経営者様へ</p>
-    <h1>その掲載費、<br>今月も<span class="mark">"待ち"</span>のまま<br>溶けていませんか。</h1>
-    <p class="hero-lead">比較媒体に毎月払っても、問い合わせが来ない月は掲載費だけが出ていく。相見積もりに並べられ、価格で削られる。"載せて待つ"営業の限界を、そろそろ超えませんか。</p>
-    <p class="hero-svc">AIと専任担当が、フォーム・電話・DM・共催セミナーで御社に代わり新規開拓を運用。最後は<b>自走できる仕組み</b>まで残す伴走型です。</p>
-
-    <div class="counter">
-      <div class="counter-t"><span class="live" aria-hidden="true"></span>成果に関係なく、掲載費は"待ち"に固定で出ていく</div>
-      <div class="counter-val">
-        <span class="yen">¥</span><span class="num">120</span><span class="unit">万 / 年</span>
-      </div>
-      <div class="counter-tick" aria-hidden="true">本日すでに消化された掲載費（月額10万円想定）── <b>¥<span id="lossNum">0</span></b></div>
-      <div class="counter-note">※ 月額掲載費を仮に10万円とした場合の年額。問い合わせが来ない月も、成果に関係なく発生します。</div>
-    </div>
-
-    <div class="hero-cta">
-      <a href="#form" class="cta cta--lg">100社リストを無料で受け取る <span class="arw">→</span></a>
-      <span class="micro">資料請求は30秒・無料。リストは15分のお電話で条件を伺ってお渡しします</span>
-    </div>
-    <p class="hero-trust">運営：株式会社ライトアップ（東証グロース上場）</p>
-  </div>
-  <div class="scroll-cue"><span>SCROLL</span><span class="bar"></span></div>
-</section>
-
-<!-- ============ AIエンジン（物証） ============ -->
-<section class="sec dark" id="engine">
   <div class="wrap">
-    <p class="sec-tag">── AIアプローチリスト</p>
-    <h2 class="sec-h2">AIが、契約確度の高い企業だけを<br>抽出する。</h2>
-    <p class="sec-lead">営業リストを"数"ではなく"確度"でつくる。AIが数千社を解析し、いま制作を発注する可能性が高い企業だけを抽出します。ここから貴社の条件で絞り込んだ<b>100社を無料でお渡しする</b>のが、最初のステップです。</p>
-    <div class="engine-panel">
-      <div class="sp">
-        <div class="sp-head">
-          <div>
-            <div class="sp-eyebrow"><span class="sp-spark"></span>AI SCORING ENGINE</div>
-            <div class="sp-title">アプローチリスト</div>
-            <div class="sp-sub">解析 <b>2,000</b> 社 → 契約期待スコア上位を自動抽出</div>
-          </div>
-          <div class="sp-live"><span class="sp-dot"></span>AI 解析中</div>
-        </div>
-        <div class="sp-cols">
-          <span class="hc-rank">#</span>
-          <span>企業 / 業種</span>
-          <span class="hc-ss"><span>基礎</span><span>ニーズ</span><span>行動</span></span>
-          <span class="hc-e">契約期待</span>
-          <span class="hc-r">スコアリング理由</span>
-        </div>
-        <div class="sp-rows">
-      <div class="pr">
-        <span class="pr-rank">01</span>
-        <div class="pr-co"><span class="pr-mask" style="width:62%"></span><span class="pr-tag">HR Tech</span><span class="pr-feat">採用強化フェーズ</span></div>
-        <div class="pr-ss"><span>84</span><span>89</span><span>91</span></div>
-        <div class="pr-e"><span class="pr-e-n">93</span><span class="pr-e-bar"><i style="width:93%"></i></span></div>
-        <div class="pr-r">採用サイト・採用動画の発注可能性が高い</div>
+    <div>
+      <p class="hero-eyebrow">比較媒体に載せている制作会社の経営者様へ</p>
+      <h1>その掲載費、今月も<br><span class="aka">"待ち"<svg viewBox="0 0 120 60" aria-hidden="true"><path class="p1" d="M8,44 C4,20 30,6 62,8 C96,10 116,22 112,38 C108,52 74,58 44,54 C22,51 10,48 12,40"/><path class="p2" d="M14,46 C8,24 34,10 64,12 C94,14 110,25 107,38"/></svg></span>のまま<br>溶けていませんか。</h1>
+      <p class="hero-lead">比較媒体に毎月払っても、問い合わせが来ない月は掲載費だけが出ていく。相見積もりに並べられ、価格で削られる。"載せて待つ"営業の限界を、そろそろ超えませんか。</p>
+      <p class="hero-sub">AIと専任担当が、フォーム・電話・DM・共催セミナーで御社に代わり新規開拓を運用。最後は<b>自走できる仕組み</b>まで残す伴走型です。</p>
+      <div class="hero-cta">
+        <a class="btn" href="#form" data-cta="hero">100社リストを無料で受け取る <span class="ar">→</span></a>
+        <p class="hero-path">資料請求30秒<span class="sep">→</span>15分の電話<span class="sep">→</span>100社リスト無料<span class="sep">→</span><b>ここまで契約不要</b></p>
+        <p class="btn-note">資料請求は30秒・無料。リストは15分のお電話で条件を伺ってお渡しします</p>
       </div>
-      <div class="pr">
-        <span class="pr-rank">02</span>
-        <div class="pr-co"><span class="pr-mask" style="width:78%"></span><span class="pr-tag">VR・エンタメ</span><span class="pr-feat">新規タイトル連続</span></div>
-        <div class="pr-ss"><span>88</span><span>91</span><span>92</span></div>
-        <div class="pr-e"><span class="pr-e-n">93</span><span class="pr-e-bar"><i style="width:93%"></i></span></div>
-        <div class="pr-r">LP・PV・キービジュアル制作の継続需要</div>
-      </div>
-      <div class="pr">
-        <span class="pr-rank">03</span>
-        <div class="pr-co"><span class="pr-mask" style="width:70%"></span><span class="pr-tag">EC・アパレル</span><span class="pr-feat">撮影の外注化が進行</span></div>
-        <div class="pr-ss"><span>83</span><span>89</span><span>91</span></div>
-        <div class="pr-e"><span class="pr-e-n">92</span><span class="pr-e-bar"><i style="width:92%"></i></span></div>
-        <div class="pr-r">シーズン毎の撮影・特集ページ制作を外注化</div>
-      </div>
-      <div class="pr">
-        <span class="pr-rank">04</span>
-        <div class="pr-co"><span class="pr-mask" style="width:84%"></span><span class="pr-tag">ブランディング広告</span><span class="pr-feat">自社媒体の強化が経営テーマ</span></div>
-        <div class="pr-ss"><span>82</span><span>88</span><span>90</span></div>
-        <div class="pr-e"><span class="pr-e-n">92</span><span class="pr-e-bar"><i style="width:92%"></i></span></div>
-        <div class="pr-r">動画・広告クリエイティブ一式の制作ニーズ</div>
-      </div>
-      <div class="pr">
-        <span class="pr-rank">05</span>
-        <div class="pr-co"><span class="pr-mask" style="width:66%"></span><span class="pr-tag">SaaS・AI</span><span class="pr-feat">急成長・ブランド刷新期</span></div>
-        <div class="pr-ss"><span>89</span><span>92</span><span>93</span></div>
-        <div class="pr-e"><span class="pr-e-n">92</span><span class="pr-e-bar"><i style="width:92%"></i></span></div>
-        <div class="pr-r">ブランド/採用サイト新設で発注確度が大</div>
-      </div>
-      <div class="pr">
-        <span class="pr-rank">06</span>
-        <div class="pr-co"><span class="pr-mask" style="width:72%"></span><span class="pr-tag">メディア・広告</span><span class="pr-feat">クリエイター採用が必須</span></div>
-        <div class="pr-ss"><span>81</span><span>87</span><span>88</span></div>
-        <div class="pr-e"><span class="pr-e-n">90</span><span class="pr-e-bar"><i style="width:90%"></i></span></div>
-        <div class="pr-r">採用動画・特設サイト制作の親和性が高い</div>
-      </div>
-      </div>
-        <div class="sp-foot"><span>契約期待スコア＝総合確度（基礎×ニーズ×行動）</span><span class="sp-eng">screen_deep.py</span></div>
-      </div>
+      <ul class="hero-trust">
+        <li>運営：株式会社ライトアップ（東証グロース上場）</li>
+        <li>累計支援 200社超</li>
+        <li>入力4項目・30秒</li>
+      </ul>
     </div>
-    <p class="engine-note">※ 実際の出力画面イメージ。社名は機密保護のためマスクしています。</p>
-    <div class="engine-cta"><a href="#form" class="cta cta--lg">100社リストを無料で受け取る <span class="arw">→</span></a></div>
+
+    <aside class="slip" aria-label="掲載費の試算伝票">
+      <span class="tape" aria-hidden="true"></span>
+      <div class="slip-head">
+        <span>払込伝票 ── 比較媒体 掲載費</span>
+        <span class="stamp">待ち</span>
+      </div>
+      <div class="slip-body">
+        <div class="slip-row"><span class="k">摘要</span><span class="v">掲載費（月額・固定）</span></div>
+        <div class="slip-row"><span class="k">成果との連動</span><span class="v strike">なし</span></div>
+        <div class="slip-row"><span class="k">問い合わせゼロの月</span><span class="v">満額発生</span></div>
+      </div>
+      <div class="slip-total">
+        <span class="cap">成果に関係なく、"待ち"に固定で出ていく</span>
+        <span class="amt">120<small>万円 / 年</small></span>
+      </div>
+      <div class="slip-live">今年これまでに消化された掲載費（月額10万円想定）── ¥<span class="num" id="lossNum">0</span> <span class="of">/ 年間 120万円</span></div>
+      <p class="slip-note">※ 月額掲載費を仮に10万円とした場合の年額。問い合わせが来ない月も、成果に関係なく発生します。</p>
+    </aside>
   </div>
 </section>
 
-<!-- ============ 01 共感 ============ -->
+<!-- ============ 支援実績の帯 ============ -->
+<section class="logobar" aria-label="支援実績">
+  <div class="wrap">
+    <span class="lb-label">SUPPORTED ── 支援してきた制作会社</span>
+    <ul>
+      <li>Web制作</li>
+      <li>動画制作</li>
+      <li>システム開発</li>
+      <li>デザイン・広告</li>
+      <li>ブランディング</li>
+    </ul>
+    <span class="lb-n">累計 <b>200</b> 社超 ／ 継続率 <b>97</b> %</span>
+  </div>
+</section>
+
+<!-- ============ PAIN ============ -->
 <section class="sec" id="pain">
+  <span class="gno" aria-hidden="true">01</span>
   <div class="wrap">
-    <p class="sec-tag">01 ── 待ちの営業の限界</p>
-    <h2 class="sec-h2">"載せて待つ"の限界は、<br>もう見えているはずです。</h2>
-    <p class="sec-lead">比較媒体は、待っていれば問い合わせが来る仕組み。でも、その「待ち」の構造そのものが、制作会社の利益を静かに削っています。</p>
-
-    <div class="pains">
-      <div class="pain">
-        <span class="pain-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-        <div><h3>問い合わせが来ない月も、掲載費は出ていく</h3><p>成果に関係なく毎月かかる固定費。閑散期でも媒体費は止まらず、受注できなければまるごと赤字になる。</p></div>
-      </div>
-      <div class="pain">
-        <span class="pain-ico"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/><path d="M8 3v18" stroke-dasharray="2 2"/></svg></span>
-        <div><h3>相見積もりに並べられ、価格で削られる</h3><p>媒体経由の問い合わせは、最初から数社比較が前提。技術力ではなく金額で選ばれ、単価がじりじり下がっていく。</p></div>
-      </div>
-      <div class="pain">
-        <span class="pain-ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
-        <div><h3>受注の主導権が、媒体側にある</h3><p>問い合わせの量も質も、媒体の掲載順位次第。自分たちで新規商談をコントロールできない状態が続いている。</p></div>
+    <div class="sec-head">
+      <p class="kicker">01 ── 待ちの営業の限界</p>
+      <h2>"載せて待つ"の限界は、<br>もう見えているはずです。</h2>
+      <p class="lead">比較媒体は、待っていれば問い合わせが来る仕組み。でも、その「待ち」の構造そのものが、制作会社の利益を静かに削っています。</p>
+    </div>
+    <div class="ledger shift">
+      <div class="ledger-in">
+        <div class="ledger-head">
+          <span>勘定 ── 比較媒体 掲載費</span>
+          <span class="lg-term">期間 12ヶ月 ／ 月額10万円想定</span>
+        </div>
+        <div class="ledger-cols" aria-hidden="true"><span>摘要</span><span>いま起きていること</span><span>差引</span></div>
+        <div class="lrow">
+          <h3 class="lrow-k"><span class="lno">01</span>問い合わせが来ない月も、掲載費は出ていく</h3>
+          <p class="lrow-d">成果に関係なく毎月かかる固定費。閑散期でも媒体費は止まらず、受注できなければまるごと赤字になる。</p>
+          <div class="lrow-v"><b>10<small>万円/月</small></b><span class="lrow-n">満額発生</span></div>
+        </div>
+        <div class="lrow">
+          <h3 class="lrow-k"><span class="lno">02</span>相見積もりに並べられ、価格で削られる</h3>
+          <p class="lrow-d">媒体経由の問い合わせは、最初から数社比較が前提。技術力ではなく金額で選ばれ、単価がじりじり下がっていく。</p>
+          <div class="lrow-v"><b>単価 ↓</b><span class="lrow-n">価格で決まる</span></div>
+        </div>
+        <div class="lrow">
+          <h3 class="lrow-k"><span class="lno">03</span>受注の主導権が、媒体側にある</h3>
+          <p class="lrow-d">問い合わせの量も質も、媒体の掲載順位次第。自分たちで新規商談をコントロールできない状態が続いている。</p>
+          <div class="lrow-v"><b>主導権</b><span class="lrow-n">媒体側</span></div>
+        </div>
+        <div class="ledger-total">
+          <span class="lt-k">差引 ── この構造のまま1年</span>
+          <span class="lt-v">120<small>万円</small></span>
+        </div>
+        <p class="ledger-note">※ 月額掲載費を仮に10万円とした場合の年額。問い合わせが来ない月も、成果に関係なく発生します。</p>
       </div>
     </div>
-
-    <div class="pain-bridge">
-      <p>問題は「営業していない」ことではありません。<br><b>"待つ"チャネルしか持っていない</b>ことです。</p>
-      <p>媒体を止める必要はありません。そこに、自社から取りにいくチャネルを一本足すだけで、受注の主導権は戻ってきます。</p>
+    <div class="pain-close shift">
+      <div>
+        <p class="q">問題は「営業していない」ことではありません。<br>"待つ"チャネルしか持っていないことです。</p>
+        <p class="a">媒体を止める必要はありません。そこに、自社から取りにいくチャネルを一本足すだけで、受注の主導権は戻ってきます。</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 02 社会的証明 ============ -->
-<section class="sec dark" id="proof">
+<!-- ============ PROOF ============ -->
+<section class="sec" id="proof">
+  <span class="gno" aria-hidden="true">02</span>
   <div class="wrap">
-    <p class="sec-tag">02 ── 実績</p>
-    <h2 class="sec-h2">"待ち"を"攻め"に変えた会社が、<br>すでにあります。</h2>
-
-    <dl class="proof-nums">
-      <div><dt>累計支援</dt><dd><span class="n">200</span><span class="s">社超</span></dd></div>
-      <div><dt>支援先の売上貢献</dt><dd><span class="pre">¥</span><span class="n">4</span><span class="s">億超</span></dd></div>
-      <div><dt>アポ率</dt><dd><span class="pre">最大</span><span class="n">3</span><span class="s">%</span><span class="avg">平均 1%</span></dd></div>
-    </dl>
-
-    <div class="cases">
-      <div class="case">
-        <div class="case-co">動画制作会社<span>BtoB / 少人数体制</span></div>
-        <div class="case-body">
-          <p class="q">「“何でも作れます”をやめたら、アポが出はじめた」</p>
-          <p class="d">幅広く当てても反応が取れずにいたが、訴求する商材を一つに絞り込み、刺さる相手だけにメッセージを最適化。アポ率が6倍に改善した。</p>
-        </div>
-        <div class="case-viz">
-          <div class="viz-bars">
-            <div class="viz-bar"><div class="viz-track"><div class="viz-col" style="height:16%"></div></div><div class="viz-bl">従来</div></div>
-            <div class="viz-bar on"><div class="viz-track"><div class="viz-col on" style="height:100%"></div></div><div class="viz-bl">絞り込み後<b>6倍</b></div></div>
-          </div>
-          <p class="viz-cap">アポ率の変化</p>
-        </div>
-      </div>
-      <div class="case">
-        <div class="case-co">Web制作・広告運用<span>新規は問い合わせ依存</span></div>
-        <div class="case-body">
-          <p class="q">「待ちの新規開拓を、自分から取りにいく形に変えた」</p>
-          <p class="d">問い合わせ待ちに頼り頭打ちだったが、特定業界の課題に深く刺す設計へ切り替え。能動的なアプローチから、新規で初めての受注が生まれた。</p>
-        </div>
-        <div class="case-viz">
-          <div class="viz-mark">
-            <div class="ring">✓</div>
-            <div class="mk-t">新規から初受注</div>
-          </div>
-          <p class="viz-cap">新チャネルの成果</p>
-        </div>
-      </div>
-      <div class="case">
-        <div class="case-co">システム開発会社<span>オフショア / 幅広く提案</span></div>
-        <div class="case-body">
-          <p class="q">「刺さる一業界に絞ったら、アポ率が約12倍に」</p>
-          <p class="d">幅広い提案でアポ率0.2%台と伸び悩んでいたが、一つの業界に絞って現場の課題を提示。アポ率2.5%へ、約12倍に改善した。</p>
-        </div>
-        <div class="case-viz">
-          <div class="viz-bars">
-            <div class="viz-bar"><div class="viz-track"><div class="viz-col" style="height:8%"></div></div><div class="viz-bl">従来<b>0.2%</b></div></div>
-            <div class="viz-bar on"><div class="viz-track"><div class="viz-col on" style="height:100%"></div></div><div class="viz-bl">絞り込み後<b>2.5%</b></div></div>
-          </div>
-          <p class="viz-cap">アポ率の変化（約12倍）</p>
-        </div>
-      </div>
-      <div class="case">
-        <div class="case-co">デザイン・広告制作会社<span>代理店経由が中心</span></div>
-        <div class="case-body">
-          <p class="q">「代理店の下請けから、直取引が取れるようになった」</p>
-          <p class="d">代理店経由の受注が中心で直取引が少なかったが、印刷会社・広告代理店へ“寄り添う提案”で直接アプローチ。直取引の接点が生まれ、アポが積み上がった。</p>
-        </div>
-        <div class="case-viz">
-          <div class="viz-mark">
-            <div class="ring">✓</div>
-            <div class="mk-t">直取引アポ 20件超</div>
-          </div>
-          <p class="viz-cap">新チャネルの成果</p>
-        </div>
-      </div>
+    <div class="sec-head">
+      <p class="kicker">02 ── 実績</p>
+      <h2>"待ち"を"攻め"に変えた会社が、<br>すでにあります。</h2>
     </div>
-    <p class="case-note">※ 事例はプライバシー保護のため匿名化しています。数値は各社の実績であり、成果を保証するものではありません。</p>
+    <div class="bignums">
+      <div class="bignum"><span class="cap">SUPPORTED ── 累計支援</span><span class="n"><b>200</b><small>社超</small></span></div>
+      <div class="bignum"><span class="cap">CONTRIBUTION ── 支援先の売上貢献</span><span class="n"><b>4</b><small>億超</small></span></div>
+      <div class="bignum"><span class="cap">APPOINTMENT ── アポ率</span><span class="n">最大<b>3</b><small>%</small></span><span class="sub">平均 1%</span></div>
+    </div>
+    <article class="case-lead">
+      <div class="case-lead-copy">
+        <p class="tag"><b>システム開発会社</b> ── オフショア / 幅広く提案</p>
+        <blockquote>刺さる一業界に絞ったら、アポ率が約12倍に</blockquote>
+        <p>幅広い提案でアポ率0.2%台と伸び悩んでいたが、一つの業界に絞って現場の課題を提示。アポ率2.5%へ、約12倍に改善した。</p>
+      </div>
+      <div class="case-lead-fig">
+        <span class="cl-cap">アポ率の変化</span>
+        <div class="cl-nums">
+          <span class="cl-from">0.2<small>%</small></span>
+          <span class="cl-arrow">→</span>
+          <span class="cl-to">2.5<small>%</small></span>
+        </div>
+        <span class="cl-mult">約 12 倍</span>
+      </div>
+    </article>
+    <div class="cases-sub">
+      <article class="case">
+        <p class="tag"><b>動画制作会社</b> ── BtoB / 少人数体制</p>
+        <blockquote>“何でも作れます”をやめたら、アポが出はじめた</blockquote>
+        <p>幅広く当てても反応が取れずにいたが、訴求する商材を一つに絞り込み、刺さる相手だけにメッセージを絞り込んだ。アポ率が6倍に改善した。</p>
+        <div class="res"><span class="from">従来</span><span class="arrow">→</span><span class="to">絞り込み後 6倍</span><span class="cap">アポ率の変化</span></div>
+      </article>
+      <article class="case">
+        <p class="tag"><b>Web制作・広告運用</b> ── 新規は問い合わせ依存</p>
+        <blockquote>待ちの新規開拓を、自分から取りにいく形に変えた</blockquote>
+        <p>問い合わせ待ちに頼り頭打ちだったが、特定業界の課題に深く刺す設計へ切り替え。能動的なアプローチから、新規で初めての受注が生まれた。</p>
+        <div class="res"><span class="to">✓ 新規から初受注</span><span class="cap">新チャネルの成果</span></div>
+      </article>
+      <article class="case">
+        <p class="tag"><b>デザイン・広告制作会社</b> ── 代理店経由が中心</p>
+        <blockquote>代理店の下請けから、直取引が取れるようになった</blockquote>
+        <p>代理店経由の受注が中心で直取引が少なかったが、印刷会社・広告代理店へ“寄り添う提案”で直接アプローチ。直取引の接点が生まれ、アポが積み上がった。</p>
+        <div class="res"><span class="to">✓ 直取引アポ 20件超</span><span class="cap">新チャネルの成果</span></div>
+      </article>
+    </div>
+    <p class="proof-legal">※ 事例はプライバシー保護のため匿名化しています。数値は各社の実績であり、成果を保証するものではありません。</p>
+    <div class="proof-cta">
+      <a class="txt-cta" href="#form" data-cta="proof"><span class="u">同じ一歩目を、まず無料の100社リストから</span> <span class="ar">→</span></a>
+    </div>
   </div>
 </section>
 
-<!-- ============ 03 未来 ============ -->
+<!-- ============ FUTURE ============ -->
 <section class="sec" id="future">
+  <span class="gno" aria-hidden="true">03</span>
   <div class="wrap">
-    <p class="sec-tag">03 ── 導入後の状態</p>
-    <h2 class="sec-h2">媒体に依存しない、<br>自社の営業チャネルを持つ。</h2>
-    <p class="sec-lead">同じ新規開拓でも、"待つ"のか"取りにいく"のかで、半年後の立ち位置はまったく変わります。</p>
-
+    <div class="sec-head">
+      <p class="kicker">03 ── 導入後の状態</p>
+      <h2>媒体に依存しない、<br>自社の営業チャネルを持つ。</h2>
+      <p class="lead">同じ新規開拓でも、"待つ"のか"取りにいく"のかで、半年後の立ち位置はまったく変わります。</p>
+    </div>
     <div class="vs">
-      <div class="vs-col vs-wait">
-        <span class="vs-chip">これまで ── 待ち</span>
-        <h3>媒体に載せて、問い合わせを待つ</h3>
+      <div class="vs-col wait">
+        <h3>これまで ── 待ち</h3>
+        <p class="sub">媒体に載せて、問い合わせを待つ</p>
         <dl>
-          <div><dt>新規接点</dt><dd>媒体の掲載順位まかせ</dd></div>
-          <div><dt>商談の入り方</dt><dd>最初から数社で比較される</dd></div>
-          <div><dt>費用対効果</dt><dd>成果ゼロでも掲載費は固定で出ていく</dd></div>
-          <div><dt>主導権</dt><dd>媒体側にある</dd></div>
+          <dt>新規接点</dt><dd>媒体の掲載順位まかせ</dd>
+          <dt>商談の入り方</dt><dd>最初から数社で比較される</dd>
+          <dt>費用対効果</dt><dd>成果ゼロでも掲載費は固定で出ていく</dd>
+          <dt>主導権</dt><dd>媒体側にある</dd>
         </dl>
       </div>
-      <div class="vs-col vs-atk">
-        <span class="vs-chip">これから ── 攻め</span>
-        <h3>狙った企業へ、自社から接点をつくる</h3>
+      <div class="vs-col go">
+        <h3>これから ── <span class="aka2">攻め</span></h3>
+        <p class="sub">狙った企業へ、自社から接点をつくる</p>
         <dl>
-          <div><dt>新規接点</dt><dd>ターゲットを指定して能動的に</dd></div>
-          <div><dt>商談の入り方</dt><dd>比較される前に、直接相談される</dd></div>
-          <div><dt>費用対効果</dt><dd>商談数で測れて、改善できる</dd></div>
-          <div><dt>主導権</dt><dd>自社にある</dd></div>
+          <dt>新規接点</dt><dd>ターゲットを指定して能動的に</dd>
+          <dt>商談の入り方</dt><dd>比較される前に、直接相談される</dd>
+          <dt>費用対効果</dt><dd>商談数で測れて、改善できる</dd>
+          <dt>主導権</dt><dd>自社にある</dd>
         </dl>
       </div>
     </div>
-
-    <p class="vs-bridge">半年後、<b>「媒体が止まったら終わる」不安から抜けている</b>かどうか。その分かれ目は、今チャネルを一本増やすかどうかです。</p>
+    <p class="vs-close">半年後、「媒体が止まったら終わる」不安から抜けているかどうか。その分かれ目は、<b>今チャネルを一本増やすかどうか</b>です。</p>
   </div>
 </section>
 
-<!-- ============ 04 料金 ============ -->
-<section class="sec dark" id="price">
+<!-- ============ PRICE ============ -->
+<section class="sec" id="price">
+  <span class="gno" aria-hidden="true">04</span>
   <div class="wrap">
-    <p class="sec-tag">04 ── 料金</p>
-    <h2 class="sec-h2">その掲載費を、<br>"待ち"から"攻め"へ。</h2>
-    <div class="cmp">比較媒体の掲載費は、反応がなくても<b>"待ち"に固定で消えて残らない</b>。同じ販促予算を、商談と仕組みが自社に積み上がる"攻め"へ回す発想です。</div>
-
-    <div class="svc-box">
-      <p class="svc-t">月額に含まれるもの</p>
-      <p class="svc-lead">無料リストを起点に、<b>フォーム・電話・DM・共催セミナー</b>の多チャネルで、御社に代わって新規開拓を運用。月1回のMTGでPDCAを一緒に回し、<b>ノウハウを御社に残して、最後は“自走”できる営業の仕組みまで伴走</b>します。単発の送信代行ではなく、いずれベンダー無しで回る状態をつくるのがゴールです。</p>
+    <div class="sec-head">
+      <p class="kicker">04 ── 料金</p>
+      <h2>その掲載費を、<br>"待ち"から"攻め"へ。</h2>
+      <p class="lead">比較媒体の掲載費は、反応がなくても"待ち"に固定で消えて残らない。同じ販促予算を、商談と仕組みが自社に積み上がる"攻め"へ回す発想です。</p>
     </div>
-
-    <p class="camp-badge"><i>スタートアップキャンペーン</i> 先着10社 ／ 特別価格でご案内します</p>
-    <div class="plans">
-      <!-- レフトアンカー：最も高額なアドバンスを左に -->
-      <div class="plan">
-        <div class="plan-name">プレミアム</div>
-        <div class="plan-for">稼働量を最大化し、一気に商談数を積み上げたい制作会社向け</div>
-        <div class="plan-price">
-          <div class="now"><span class="yen">¥</span><span class="n">40</span><span class="u">万 / 月</span></div>
+    <div class="shift">
+      <div class="price-inc">
+        <b>月額に含まれるもの：</b>無料リストを起点に、フォーム・電話・DM・共催セミナーの多チャネルで、御社に代わって新規開拓を運用。月1回のMTGでPDCAを一緒に回し、ノウハウを御社に残して、最後は“自走”できる営業の仕組みまで伴走します。単発の送信代行ではなく、いずれベンダー無しで回る状態をつくるのがゴールです。
+      </div>
+      <p class="camp">スタートアップキャンペーン 先着10社 ／ 特別価格でご案内します</p>
+      <div class="plans">
+        <a class="plan" href="#form" data-cta="plan_premium">
+          <h3>プレミアム</h3>
+          <p class="for">稼働量を上限まで引き上げ、一気に商談数を積み上げたい制作会社向け</p>
+          <p class="amt"><span class="num">40</span><span class="unit">万円 / 月</span></p>
+          <span class="go">このプランを検討 ── まず無料リストから <span class="ar">→</span></span>
+        </a>
+        <a class="plan" href="#form" data-cta="plan_standard">
+          <span class="rec-stamp">おすすめ</span>
+          <h3>スタンダード</h3>
+          <p class="for">まず安定した商談の流れを、無理のない量でつくりたい制作会社向け</p>
+          <p class="amt"><span class="num">25</span><span class="unit">万円 / 月</span></p>
+          <span class="go">このプランを検討 ── まず無料リストから <span class="ar">→</span></span>
+        </a>
+        <a class="plan" href="#form" data-cta="plan_starter">
+          <h3>スターター</h3>
+          <p class="for">まずは小さく試して、新規開拓の手応えを確かめたい制作会社向け</p>
+          <p class="amt"><span class="num">15</span><span class="unit">万円 / 月</span></p>
+          <span class="go">このプランを検討 ── まず無料リストから <span class="ar">→</span></span>
+        </a>
+      </div>
+      <p class="price-terms">初期費用 50万円　／　契約期間 12ヶ月　／　上記はすべて特別価格・税別</p>
+      <div class="roi">
+        <div>
+          <h3>回収の考え方</h3>
+          <p>掲載費のように“待って消える”コストではなく、自社の受注につながる投資へ。私たちは投じた費用に対して回収3〜5倍を一つの目安に、設計・運用します。</p>
+          <p style="margin-top:8px">試算例：100社にアプローチ→商談化率1〜3%で月1〜3商談→商談からの受注率30%（達成事例）なら、月あたり最大約1件の新規受注。案件1件の粗利で月額が回収圏か、が判断軸です。</p>
+          <p class="legal">※ 達成事例に基づく試算で、成果を保証するものではありません。商材・単価・体制により変動します。</p>
         </div>
       </div>
-      <div class="plan plan--rec">
-        <div class="plan-badge">おすすめ</div>
-        <div class="plan-name">スタンダード</div>
-        <div class="plan-for">まず安定した商談の流れを、無理のない量でつくりたい制作会社向け</div>
-        <div class="plan-price">
-          <div class="now"><span class="yen">¥</span><span class="n">25</span><span class="u">万 / 月</span></div>
+      <div class="price-cta">
+        <div class="cta-pair">
+          <a class="btn" href="#form" data-cta="price">まず100社リストを無料で受け取る <span class="ar">→</span></a>
+          <a class="btn btn--sub" href="#flow" data-cta="price_flow">導入の流れを見る</a>
         </div>
-      </div>
-      <div class="plan">
-        <div class="plan-name">スターター</div>
-        <div class="plan-for">まずは小さく試して、新規開拓の手応えを確かめたい制作会社向け</div>
-        <div class="plan-price">
-          <div class="now"><span class="yen">¥</span><span class="n">15</span><span class="u">万 / 月</span></div>
-        </div>
+        <p class="btn-note">プランの相談は、リスト受け取り後でかまいません</p>
       </div>
     </div>
+  </div>
+</section>
 
-    <p class="plan-terms">初期費用 <b>50万円</b>　／　契約期間 <b>12ヶ月</b>　／　上記はすべて特別価格・税別</p>
-
-    <div class="roi">
-      <p class="roi-t">回収の考え方</p>
-      <p class="roi-lead">掲載費のように<b>“待って消える”コストではなく</b>、自社の受注につながる投資へ。私たちは投じた費用に対して<b>回収3〜5倍</b>を一つの目安に、設計・運用します。</p>
-      <p class="roi-calc">試算例：100社にアプローチ→商談化率1〜3%で月1〜3商談→商談からの<b>受注率30%（達成事例）</b>なら、月あたり最大約1件の新規受注。<b>案件1件の粗利で月額が回収圏か</b>、が判断軸です。</p>
-      <p class="roi-note">※ 達成事例に基づく試算で、成果を保証するものではありません。商材・単価・体制により変動します。</p>
+<!-- ============ FLOW ============ -->
+<section class="sec" id="flow">
+  <span class="gno" aria-hidden="true">05</span>
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">05 ── 導入の流れ</p>
+      <h2>受け取ってから、<br>運用が回りはじめるまで。</h2>
+      <p class="lead">リストを受け取った時点では、まだ何も決まっていません。契約後に放置されることもありません。順番だけ先にお伝えします。</p>
     </div>
-
-    <div class="price-cta">
-      <a href="#form" class="cta cta--lg">まず100社リストを無料で受け取る <span class="arw">→</span></a>
-      <span class="micro">プランの相談は、リスト受け取り後でかまいません</span>
+    <div class="flow shift">
+      <div class="fstep">
+        <span class="fn">STEP 01</span>
+        <h3>フォームから資料請求</h3>
+        <p>4項目・30秒。サービス資料を自動でお送りします。この時点で費用は発生しません。</p>
+        <p class="when">所要 30秒</p>
+      </div>
+      <div class="fstep">
+        <span class="fn">STEP 02</span>
+        <h3>15分のお電話で条件を伺う</h3>
+        <p>担当・今尾が業種・規模・取りたい層を確認。ここで100社リストの抽出条件を決めます。</p>
+        <p class="when">所要 15分</p>
+      </div>
+      <div class="fstep">
+        <span class="fn">STEP 03</span>
+        <h3>貴社専用の100社リストをお渡し</h3>
+        <p>条件に沿って抽出したリストを無料でお渡し。ここまでで判断いただいてかまいません。</p>
+        <p class="when">無料・契約不要</p>
+      </div>
+      <div class="fstep">
+        <span class="fn">STEP 04</span>
+        <h3>ご契約後、多チャネルで運用開始</h3>
+        <p>フォーム・電話・DM・共催セミナーを実行し、月1回のMTGでPDCA。ノウハウは御社に残します。</p>
+        <p class="when">月1回のMTG</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
 <section class="sec" id="faq">
+  <span class="gno" aria-hidden="true">Q</span>
   <div class="wrap">
-    <p class="sec-tag">── よくある質問</p>
-    <h2 class="sec-h2">導入前に、よく聞かれること。</h2>
-    <div class="faq">
+    <div class="sec-head">
+      <p class="kicker">FAQ ── よくある質問</p>
+      <h2>導入前に、よく聞かれること。</h2>
+    </div>
+    <div class="faq-list shift">
       <details>
-        <summary>導入したら、こちらは何をすればいいですか？</summary>
-        <p>戦略設計からフォーム・電話・DM・共催セミナーの実行まで、専任担当とAIが運用します。御社にお願いするのは、月次の方針すり合わせと、入ってきた商談への対応が中心です。</p>
+        <summary><span class="qn">Q.01</span><span>導入したら、こちらは何をすればいいですか？</span><span class="pm"></span></summary>
+        <p class="ans">戦略設計からフォーム・電話・DM・共催セミナーの実行まで、専任担当とAIが運用します。御社にお願いするのは、月次の方針すり合わせと、入ってきた商談への対応が中心です。</p>
       </details>
       <details>
-        <summary>無料の100社リストは、どうやって受け取れますか？</summary>
-        <p>フォーム送信（30秒）で、まずサービス資料を自動送信します。その後、担当・今尾が15分のお電話で業種・規模・課題の条件を伺い、貴社専用に絞り込んだ100社リストを作成してお渡しします。</p>
+        <summary><span class="qn">Q.02</span><span>無料の100社リストは、どうやって受け取れますか？</span><span class="pm"></span></summary>
+        <p class="ans">フォーム送信（30秒）で、まずサービス資料を自動送信します。その後、担当・今尾が15分のお電話で業種・規模・課題の条件を伺い、貴社専用に絞り込んだ100社リストを作成してお渡しします。</p>
       </details>
       <details>
-        <summary>費用と契約期間を教えてください。</summary>
-        <p>月額15万円〜（スターター）、初期費用50万円、契約期間は12ヶ月です（特別価格・税別）。ノウハウを御社に残し、最終的に自走できる状態への引き継ぎまで含みます。</p>
+        <summary><span class="qn">Q.03</span><span>費用と契約期間を教えてください。</span><span class="pm"></span></summary>
+        <p class="ans">月額15万円〜（スターター）、初期費用50万円、契約期間は12ヶ月です（特別価格・税別）。ノウハウを御社に残し、最終的に自走できる状態への引き継ぎまで含みます。</p>
       </details>
       <details>
-        <summary>成果が出なかった場合は？</summary>
-        <p>成果の保証はできません。ただし"待ち"の掲載費と違い、商談数という測れる指標で毎月PDCAを回し、訴求・リスト・チャネルを改善し続けます。続けるか否かも数字で判断できるのが、この仕組みの前提です。</p>
+        <summary><span class="qn">Q.04</span><span>成果が出なかった場合は？</span><span class="pm"></span></summary>
+        <p class="ans">成果の保証はできません。ただし"待ち"の掲載費と違い、商談数という測れる指標で毎月PDCAを回し、訴求・リスト・チャネルを改善し続けます。続けるか否かも数字で判断できるのが、この仕組みの前提です。</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ============ 05 オファー＋フォーム ============ -->
-<section class="sec dark" id="offer" style="padding-bottom:clamp(80px,10vw,120px)">
+<!-- ============ OFFER ============ -->
+<section class="sec" id="offer">
+  <span class="gno" aria-hidden="true">06</span>
   <div class="wrap">
-    <p class="sec-tag">05 ── まず受け取ってください</p>
+    <div class="sec-head">
+      <p class="kicker">06 ── まず受け取ってください</p>
+    </div>
     <div class="offer-grid">
-      <div class="offer-info">
-        <div class="offer-h">
-          <span class="l1">いきなり契約は必要ありません。まず、貴社サービスにニーズを持つ</span>
-          <span class="l2"><span class="n">100</span><span class="u">社</span><span class="free">のリストを無料で。</span></span>
+      <div class="offer-copy">
+        <h2>いきなり契約は必要ありません。まず、貴社サービスにニーズを持つ<span class="big">100社</span>のリストを無料で。</h2>
+        <div class="offer-points">
+          <div class="pt">
+            <span class="n">01</span>
+            <div>
+              <h3>AIが、契約確度の高い企業だけを抽出する</h3>
+              <p>営業リストを"数"ではなく"確度"でつくる。AIが数千社を解析し、いま制作を発注する可能性が高い企業だけを抽出。そこから業種・規模・課題をヒアリングし、御社が本当に取りたい層だけに絞った100社をお渡しします。</p>
+              <div class="score-card" role="img" aria-label="AIスコアリングエンジンの出力イメージ：解析2,000社から契約期待スコア上位を自動抽出">
+                <div class="score-head">
+                  <span>AI SCORING ENGINE ── 解析 2,000 社 → 上位を自動抽出</span>
+                  <span class="live">AI 解析中</span>
+                </div>
+                <div class="tbl-scroll">
+                <table class="score-table">
+                  <thead>
+                    <tr><th>#</th><th>企業 / 業種</th><th>契約期待</th><th>スコアリング理由</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>01</td><td class="co"><b>HR Tech</b><span>採用強化フェーズ</span></td><td class="sc hi">93</td><td class="why">採用サイト・採用動画の発注可能性が高い</td></tr>
+                    <tr><td>02</td><td class="co"><b>VR・エンタメ</b><span>新規タイトル連続</span></td><td class="sc hi">92</td><td class="why">LP・PV・キービジュアル制作の継続需要</td></tr>
+                    <tr><td>03</td><td class="co"><b>EC・アパレル</b><span>撮影の外注化が進行</span></td><td class="sc">89</td><td class="why">シーズン毎の撮影・特集ページ制作を外注化</td></tr>
+                    <tr><td>04</td><td class="co"><b>ブランディング広告</b><span>自社媒体の強化が経営テーマ</span></td><td class="sc">88</td><td class="why">動画・広告クリエイティブ一式の制作ニーズ</td></tr>
+                    <tr><td>05</td><td class="co"><b>SaaS・AI</b><span>急成長・ブランド刷新期</span></td><td class="sc">86</td><td class="why">ブランド/採用サイト新設で発注確度が大</td></tr>
+                  </tbody>
+                </table>
+                </div>
+                <p class="score-note">※ 実際の出力画面イメージ。社名は機密保護のためマスクしています。</p>
+              </div>
+            </div>
+          </div>
+          <div class="pt">
+            <span class="n">02</span>
+            <div>
+              <h3>そのまま営業に使える精度</h3>
+              <p>企業名だけの名簿ではなく、アプローチ先として機能するリスト。受け取ったその日から動けます。</p>
+            </div>
+          </div>
+          <div class="pt">
+            <span class="n">03</span>
+            <div>
+              <h3>サービス概要資料もあわせて</h3>
+              <p>AIと専任担当による多チャネル新規開拓（フォーム／電話／DM／共催セミナー）の仕組み・料金・導入の流れがわかる資料を同送します。</p>
+            </div>
+          </div>
         </div>
-
-        <div class="gets">
-          <div class="get"><span class="get-no">01</span><div><h3>貴社が"ニーズあり"と見なす条件で抽出</h3><p>業種・規模・課題をヒアリングし、御社が本当に取りたい層だけに絞った100社をお渡しします。</p></div></div>
-          <div class="get"><span class="get-no">02</span><div><h3>そのまま営業に使える精度</h3><p>企業名だけの名簿ではなく、アプローチ先として機能するリスト。受け取ったその日から動けます。</p></div></div>
-          <div class="get"><span class="get-no">03</span><div><h3>サービス概要資料もあわせて</h3><p>AIと専任担当による多チャネル新規開拓（フォーム／電話／DM／共催セミナー）の仕組み・料金・導入の流れがわかる資料を同送します。</p></div></div>
+        <div class="offer-stats">
+          <span>累計支援 <b><i>200</i>社超</b></span>
+          <span>売上貢献 <b><i>4</i>億超</b></span>
+          <span>アポ率 <b>最大<i>3</i>%</b>（平均1%）</span>
         </div>
-
-        <dl class="trust">
-          <div><dt>累計支援</dt><dd><span class="n">200</span><span class="s">社超</span></dd></div>
-          <div><dt>支援先の売上貢献</dt><dd><span class="pre">¥</span><span class="n">4</span><span class="s">億超</span></dd></div>
-          <div><dt>アポ率</dt><dd><span class="pre">最大</span><span class="n">3</span><span class="s">%</span><span class="avg">平均 1%</span></dd></div>
-        </dl>
       </div>
 
-      <!-- フォーム一体型・2ステップ・4項目 -->
-      <div class="fcard" id="form">
-        <div class="fprog-t"><span id="fstepLabel">STEP 1 / 2</span><span id="fstepHint">まず会社名だけ</span></div>
-        <div class="fprog"><span class="on" id="fp1"></span><span id="fp2"></span></div>
+      <div class="form-card" id="form">
+        <div class="form-slip-head perf">
+          <span>申込伝票 ── 無料100社リスト</span>
+          <span class="stamp" style="width:44px;height:44px;font-size:12px">無料</span>
+        </div>
+        <div class="form-in">
+          <div class="form-prog" id="formProg"><div class="bar"><i></i></div></div>
+          <div class="form-meta"><span id="fstepLabel">STEP 1 / 2</span><span id="fstepHint">まず会社名だけ</span></div>
+          <h3>100社リストを無料で受け取る</h3>
+          <p class="fhint">入力は4項目・30秒。まずは会社名から。</p>
 
-        <form id="leadform" action="https://formspree.io/f/xvzlnvoa" method="POST" novalidate>
-          <input type="hidden" name="cid" id="f_cid">
-          <input type="hidden" name="mail_pattern" id="f_mp" value="wd">
-          <!-- https://systemdev.insight-sales.jp はデプロイ時に実URLへ差し替え -->
-          <input type="hidden" name="_next" value="https://systemdev.insight-sales.jp/thanks.html">
+          <form id="leadform" action="https://formspree.io/f/xvzlnvoa" method="POST" novalidate>
+            <input type="hidden" name="cid" id="f_cid">
+            <input type="hidden" name="mail_pattern" id="f_mp" value="wd">
+            <input type="hidden" name="_next" value="https://systemdev.insight-sales.jp/thanks.html">
 
-          <div id="fstep1">
-            <p class="fcard-t">100社リストを無料で受け取る</p>
-            <p class="fcard-s">入力は4項目・30秒。まずは会社名から。</p>
-            <div class="field">
-              <label for="f_company">会社名 <span class="req">必須</span></label>
-              <div class="inwrap">
+            <div id="fstep1">
+              <div class="fld">
+                <label for="f_company">会社名<span class="req">必須</span></label>
                 <input type="text" name="company" id="f_company" autocomplete="organization" placeholder="株式会社〇〇" inputmode="text">
-                <svg class="chk" viewBox="0 0 24 24" fill="none" stroke="#3AA76D" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+                <p class="emsg" id="err_company" role="alert"></p>
               </div>
-              <p class="ferr" id="err_company"></p>
+              <button type="button" class="btn" id="toStep2">次へ（あと3項目） <span class="ar">→</span></button>
             </div>
-            <div class="fstep-actions">
-              <button type="button" class="cta fbtn" id="toStep2">次へ（あと3項目） <span class="arw">→</span></button>
-            </div>
-          </div>
 
-          <div id="fstep2" class="hide">
-            <p class="fcard-t">受け取り先を教えてください</p>
-            <p class="fcard-s">このリストの送付先です。営業電話でしつこく追いかけることはありません。</p>
-            <div class="field">
-              <label for="f_name">お名前 <span class="req">必須</span></label>
-              <div class="inwrap">
+            <div id="fstep2" class="hide">
+              <p class="fhint" style="margin-bottom:14px"><b>受け取り先を教えてください。</b><br>このリストの送付先です。営業電話でしつこく追いかけることはありません。</p>
+              <div class="fld">
+                <label for="f_name">お名前<span class="req">必須</span></label>
                 <input type="text" name="name" id="f_name" autocomplete="name" placeholder="山田 太郎">
-                <svg class="chk" viewBox="0 0 24 24" fill="none" stroke="#3AA76D" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+                <p class="emsg" id="err_name" role="alert"></p>
               </div>
-              <p class="ferr" id="err_name"></p>
-            </div>
-            <div class="field">
-              <label for="f_email">メールアドレス <span class="req">必須</span></label>
-              <div class="inwrap">
+              <div class="fld">
+                <label for="f_email">メールアドレス<span class="req">必須</span></label>
                 <input type="email" name="email" id="f_email" autocomplete="email" placeholder="you@example.co.jp" inputmode="email">
-                <svg class="chk" viewBox="0 0 24 24" fill="none" stroke="#3AA76D" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+                <p class="emsg" id="err_email" role="alert"></p>
               </div>
-              <p class="ferr" id="err_email"></p>
-            </div>
-            <div class="field">
-              <label for="f_tel">電話番号 <span class="req">必須</span></label>
-              <div class="inwrap">
+              <div class="fld">
+                <label for="f_tel">電話番号<span class="req">必須</span></label>
                 <input type="tel" name="tel" id="f_tel" autocomplete="tel" placeholder="03-1234-5678" inputmode="tel">
-                <svg class="chk" viewBox="0 0 24 24" fill="none" stroke="#3AA76D" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>
+                <p class="emsg" id="err_tel" role="alert"></p>
               </div>
-              <p class="ferr" id="err_tel"></p>
+              <button type="submit" class="btn" id="submitBtn">100社リストを受け取る <span class="ar">→</span></button>
+              <button type="button" class="back-link" id="backStep1">← 会社名を修正する</button>
             </div>
-            <div class="fstep-actions">
-              <button type="submit" class="cta fbtn" id="submitBtn">100社リストを受け取る <span class="arw">→</span></button>
-            </div>
-            <button type="button" class="fback" id="backStep1">← 会社名を修正する</button>
-          </div>
+          </form>
 
-          <p class="fdisc">※ 資料は自動送信でお届けします。リストは、担当・今尾が15分のお電話で貴社の条件を伺ったうえで作成し、お渡しします。</p>
-          <div class="fsafe">
+          <p class="form-legal">※ 資料は自動送信でお届けします。リストは、担当・今尾が15分のお電話で貴社の条件を伺ったうえで作成し、お渡しします。</p>
+          <div class="form-badges">
             <span>費用は一切かかりません</span>
             <span>30秒で完了</span>
             <span>しつこい営業はしません</span>
           </div>
-        </form>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer class="ft">
+<!-- ============ FOOTER ============ -->
+<footer>
   <div class="wrap">
-    <div class="ft-top">
-      <div class="ft-brand">
-        <img class="ft-logo" src="data:image/webp;base64,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" alt="インサイトセールス">
-        <p class="ft-tag">“待ち”の営業を、“攻め”の仕組みへ。</p>
-      </div>
-      <div class="ft-credit">
-        <span class="ft-credit-lb">運営会社　／　東証グロース上場</span>
-        <div class="ft-marks">
-          <img class="mk-wu" src="data:image/webp;base64,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" alt="株式会社ライトアップ">
-          <img class="mk-jpx" src="data:image/webp;base64,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" alt="JPX GROWTH TOKYO ／ 東証グロース市場">
-        </div>
-      </div>
-    </div>
-    <div class="ft-bottom">
-      <small>本サービスは制作会社の新規開拓を支援するものです。掲載の実績数値は当社サービスの累計値であり、成果を保証するものではありません。</small>
-      <small>© 株式会社ライトアップ</small>
-    </div>
+    <p class="ft-msg">“待ち”の営業を、<b>“攻め”</b>の仕組みへ。</p>
+    <p>運営会社：<a class="ft-link" href="https://www.writeup.co.jp/" target="_blank" rel="noopener">株式会社ライトアップ</a>　／　東証グロース上場</p>
+    <p>本サービスは制作会社の新規開拓を支援するものです。掲載の実績数値は当社サービスの累計値であり、成果を保証するものではありません。</p>
+    <p class="cr">© 株式会社ライトアップ</p>
   </div>
 </footer>
 
@@ -899,34 +1160,46 @@ a{color:inherit;text-decoration:none}
   var q = new URLSearchParams(location.search);
   var cid = q.get("cid"); if(cid) document.getElementById("f_cid").value = cid;
   var p = q.get("p"); if(p) document.getElementById("f_mp").value = "wd-" + p;
-  // cid / p を thanks.html へ引き継ぐ（Formspree _next にクエリを付与）
   var nextEl = document.querySelector('input[name="_next"]');
   if(nextEl){ var qs=[]; if(cid) qs.push("cid="+encodeURIComponent(cid)); if(p) qs.push("p="+encodeURIComponent(p)); if(qs.length) nextEl.value = nextEl.value + "?" + qs.join("&"); }
 })();
 
-/* ===== 損失ティッカー（月額掲載費10万円の"本日消化ぶん"を実レートで表示） ===== */
+/* ===== GA4: cta_click（全CTA＋プランカード / 位置パラメータ付き） ===== */
+(function(){
+  document.querySelectorAll("[data-cta]").forEach(function(el){
+    el.addEventListener("click", function(){
+      if(typeof gtag !== "function") return;
+      gtag("event", "cta_click", {
+        cta_position: el.getAttribute("data-cta"),
+        mail_pattern: document.getElementById("f_mp").value,
+        cid: document.getElementById("f_cid").value || ""
+      });
+    });
+  });
+})();
+
+/* ===== 損失ティッカー =====
+   月額10万円＝年間120万円の実レートで、今年1月1日からの累計消化ぶんを表示する。
+   日次リセットしないため、年末にちょうど伝票の ¥120万 に収束する（誇張なし）。 */
 (function(){
   var el = document.getElementById("lossNum");
   if(!el) return;
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var monthly = 100000;                        // 仮の月額掲載費
-  var perSec  = monthly / (30*24*60*60);       // ≒ 0.0386円/秒（実レート・誇張なし）
-  function fmt(n){
-    var i = Math.floor(n), d = Math.floor((n - i)*10);
-    return i.toLocaleString("ja-JP") + "." + d;
-  }
-  function todaySec(){
-    var d = new Date();
-    return d.getHours()*3600 + d.getMinutes()*60 + d.getSeconds() + d.getMilliseconds()/1000;
+  var YEARLY = 1200000; /* 月額10万円 × 12ヶ月 */
+  function ratio(){
+    var now   = new Date();
+    var start = new Date(now.getFullYear(), 0, 1);
+    var end   = new Date(now.getFullYear() + 1, 0, 1);   /* 閏年もそのまま吸収する */
+    return (now - start) / (end - start);
   }
   function tick(){
-    el.textContent = fmt(todaySec() * perSec);
-    if(!reduce) requestAnimationFrame(tick);
+    el.textContent = Math.floor(YEARLY * ratio()).toLocaleString("ja-JP");
   }
-  tick(); // reduce時は静止値を1回だけ描画
+  tick();
+  if(!reduce) setInterval(tick, 1000);
 })();
 
-/* ===== スクロールリビール（IntersectionObserver対応時のみ・reduced-motion尊重） ===== */
+/* ===== スクロールリビール ===== */
 (function(){
   if(!("IntersectionObserver" in window)) return;
   if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -948,7 +1221,7 @@ a{color:inherit;text-decoration:none}
   var form = document.getElementById("leadform");
   var step1 = document.getElementById("fstep1");
   var step2 = document.getElementById("fstep2");
-  var fp2 = document.getElementById("fp2");
+  var fp2 = document.getElementById("formProg");
   var stepLabel = document.getElementById("fstepLabel");
   var stepHint = document.getElementById("fstepHint");
 
@@ -965,6 +1238,20 @@ a{color:inherit;text-decoration:none}
   function vEmail(){ var v=document.getElementById("f_email").value.trim(); var ok=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); return !ok ? setErr("email","メールアドレスの形式が正しくありません") : setErr("email",""); }
   function vTel(){ var v=document.getElementById("f_tel").value.trim(); var ok=/^[0-9+\-()\s]{9,}$/.test(v); return !ok ? setErr("tel","電話番号を正しく入力してください") : setErr("tel",""); }
 
+  /* GA4: form_start（フォーム初回フォーカス・両パターン共通の着手指標） */
+  (function(){
+    var fired = false;
+    form.addEventListener("focusin", function(){
+      if(fired) return; fired = true;
+      if(typeof gtag === "function"){
+        gtag("event", "form_start", {
+          mail_pattern: document.getElementById("f_mp").value,
+          cid: document.getElementById("f_cid").value || ""
+        });
+      }
+    });
+  })();
+
   document.getElementById("f_company").addEventListener("blur", vCompany);
   document.getElementById("f_name").addEventListener("blur", vName);
   document.getElementById("f_email").addEventListener("blur", vEmail);
@@ -973,16 +1260,22 @@ a{color:inherit;text-decoration:none}
   document.getElementById("toStep2").addEventListener("click", function(){
     if(!vCompany()){ document.getElementById("f_company").focus(); return; }
     step1.classList.add("hide"); step2.classList.remove("hide");
-    fp2.classList.add("on"); stepLabel.textContent="STEP 2 / 2"; stepHint.textContent="あと3項目・15秒";
+    fp2.classList.add("s2"); stepLabel.textContent="STEP 2 / 2"; stepHint.textContent="あと3項目・15秒";
+    if(typeof gtag === "function"){
+      gtag("event", "form_step2", {
+        mail_pattern: document.getElementById("f_mp").value,
+        cid: document.getElementById("f_cid").value || ""
+      });
+    }
     document.getElementById("f_name").focus();
   });
   document.getElementById("backStep1").addEventListener("click", function(){
     step2.classList.add("hide"); step1.classList.remove("hide");
-    fp2.classList.remove("on"); stepLabel.textContent="STEP 1 / 2"; stepHint.textContent="まず会社名だけ";
+    fp2.classList.remove("s2"); stepLabel.textContent="STEP 1 / 2"; stepHint.textContent="まず会社名だけ";
   });
 
   form.addEventListener("submit", function(ev){
-    ev.preventDefault();                 // 既定送信を必ず止める（AJAXで送る）
+    ev.preventDefault();
     var ok = vCompany() & vName() & vEmail() & vTel();
     if(!ok){
       var first = form.querySelector("input.err");
@@ -992,28 +1285,25 @@ a{color:inherit;text-decoration:none}
     var btn = document.getElementById("submitBtn");
     if(btn){ btn.dataset._t = btn.innerHTML; btn.disabled = true; btn.innerHTML = "送信中…"; }
 
-    /* GA4: form_submit（mail_pattern / cid 付き） */
     if(typeof gtag === "function"){
       var mp = document.getElementById("f_mp").value;
       var cid = document.getElementById("f_cid").value;
       gtag("event", "form_submit", { mail_pattern: mp, cid: cid });
     }
 
-    /* リダイレクト先＝_nextの値（cid/p付き）。Formspreeの標準ページを経由せず自前で遷移 */
     var nextEl2 = document.querySelector('input[name="_next"]');
     var nextUrl = (nextEl2 && nextEl2.value) ? nextEl2.value : "/thanks.html";
     function fail(msg){ alert(msg || "送信に失敗しました。時間をおいて再度お試しください。"); if(btn){ btn.disabled=false; btn.innerHTML = btn.dataset._t || "送信"; } }
 
-    /* 資料メール自動送信（GAS Webアプリへ・撃ちっ放し／レスポンスは待たない） */
     try {
       var matUrl = "https://script.google.com/macros/s/AKfycbznooByB5GPso6QW_0r3gbsivyT5iOzNGlAkdNBzqhGqlVp1JpxMdTN4sIJGSmdZLOp/exec";
       if (matUrl.indexOf("http") === 0) {
-        var mp = "email=" + encodeURIComponent((document.getElementById("f_email")||{}).value||"")
+        var mp2 = "email=" + encodeURIComponent((document.getElementById("f_email")||{}).value||"")
                + "&company=" + encodeURIComponent((document.getElementById("f_company")||{}).value||"")
                + "&name=" + encodeURIComponent((document.getElementById("f_name")||{}).value||"")
                + "&tel=" + encodeURIComponent((document.getElementById("f_tel")||{}).value||"")
                + "&cid=" + encodeURIComponent((document.getElementById("f_cid")||{}).value||"");
-        fetch(matUrl, { method:"POST", mode:"no-cors", headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"}, body: mp });
+        fetch(matUrl, { method:"POST", mode:"no-cors", headers:{"Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"}, body: mp2 });
       }
     } catch(e){}
 
@@ -1028,7 +1318,7 @@ a{color:inherit;text-decoration:none}
   });
 })();
 
-/* ===== GA4: lp_view（mail_pattern / cid 付き） ===== */
+/* ===== GA4: lp_view ===== */
 (function(){
   if(typeof gtag !== "function") return;
   var q = new URLSearchParams(location.search);
@@ -1036,8 +1326,50 @@ a{color:inherit;text-decoration:none}
 })();
 </script>
 
-<!-- クリックビーコン（GAS WebApp・https://script.google.com/macros/s/AKfycbyd7dpil3zxm8y6xMcqWQFMMVAOaQPeH8JtRQNEr4YiPIGupqc-fqiownSJ49DDSHEJ/execはデプロイ時に差し替え） -->
-<script>(function(){var q=new URLSearchParams(location.search),c=q.get("cid");if(c)fetch("https://script.google.com/macros/s/AKfycbyd7dpil3zxm8y6xMcqWQFMMVAOaQPeH8JtRQNEr4YiPIGupqc-fqiownSJ49DDSHEJ/exec?cid="+encodeURIComponent(c)+"&p="+encodeURIComponent(q.get("p")||""),{mode:"no-cors"});})();</script>
+<!-- ビーコン（クリックログ収集・既存GAS） -->
+<script>
+(function(){var q=new URLSearchParams(location.search),c=q.get("cid");if(c)fetch("https://script.google.com/macros/s/AKfycbyd7dpil3zxm8y6xMcqWQFMMVAOaQPeH8JtRQNEr4YiPIGupqc-fqiownSJ49DDSHEJ/exec?cid="+encodeURIComponent(c)+"&p="+encodeURIComponent(q.get("p")||""),{mode:"no-cors"});})();
+</script>
+
+<!-- 追従CTA（fのみ。gには入れない＝A/Bの検証変数） -->
+<a class="sticky-cta" id="stickyCta" href="#form" data-cta="sticky">
+  <span class="sc-main">100社リストを無料で受け取る <span class="ar">→</span></span>
+  <span class="sc-note">無料・30秒・営業電話なし</span>
+</a>
+<script>
+/* ===== 追従CTA：スクロール30〜80%だけ表示（fパターンのみ） =====
+   ・80%以降はフォームまで読了しているので不要
+   ・#offer が視界に入ったら引っ込める（本体CTAと二重に主張しない）
+   ・data-cta="sticky" は既存の cta_click リスナーがそのまま拾う */
+(function(){
+  var el = document.getElementById("stickyCta");
+  if(!el) return;
+  var offer = document.getElementById("offer"), offerVisible = false;
+  function pct(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    return h > 0 ? (window.scrollY / h) * 100 : 0;
+  }
+  function update(){
+    var p = pct();
+    var on = p >= 30 && p <= 80 && !offerVisible;
+    el.classList.toggle("is-on", on);
+    /* ヘッダーCTAの退避もここで一元管理する（BRAND 6項） */
+    document.body.classList.toggle("sticky-on", on);
+  }
+  if(offer && "IntersectionObserver" in window){
+    new IntersectionObserver(function(es){
+      offerVisible = es[0].isIntersecting; update();
+    }, {threshold:0}).observe(offer);
+  }
+  window.addEventListener("scroll", update, {passive:true});
+  window.addEventListener("resize", update, {passive:true});
+  update();
+  /* 検証用（audit/手動計測から参照する） */
+  window.__stickyState = function(){
+    return {pct:+pct().toFixed(1), on:el.classList.contains("is-on"), offerVisible:offerVisible};
+  };
+})();
+</script>
 
 </body>
 </html>

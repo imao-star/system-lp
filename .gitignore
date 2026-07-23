@@ -1,0 +1,9 @@
+node_modules/
+package*.json
+.DS_Store
+.backup/
+
+# 内部資料・開発ツール（public リポジトリには公開しない。ローカルにのみ保持）
+CLAUDE.md
+.claude/
+scripts/
